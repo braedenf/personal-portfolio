@@ -14,9 +14,12 @@ const config = {
 			colors: {
 				background: {
 					light: '#4C546F',
-					dark: '#3E4253'
+					dark: '#3E4253',
+					secondary: '#EDE5D5',
+					'secondary-active': '#FFE4B0'
 				},
-				accent: '#EDAA6D'
+				accent: '#EDAA6D',
+				'accent-light': '#E9CBAF'
 			}
 		}
 	},
