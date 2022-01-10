@@ -11,9 +11,7 @@
 	<section id="header">
 		<div class="flex flex-col gap-2 lg:gap-4 items-center text-center mt-4 lg:mt-8">
 			<h1 class="font-display text-4xl lg:text-6xl text-white">Braeden Foster</h1>
-			<h2 class="font-display lg:text-2xl text-accent">
-				Fullstack Web Developer <br /> Creative Technologist
-			</h2>
+			<h2 class="font-display lg:text-2xl text-accent">Web Designer / Creative Technologist</h2>
 		</div>
 	</section>
 	<div class="absolute top-0 left-0 w-full overflow-hidden z-[-10]">
@@ -34,7 +32,7 @@
 <main
 	class="mt-20 lg:mt-48 mb-20 flex flex-col gap-28 max-w-4xl xl:max-w-6xl mx-4 sm:mx-12 lg:mx-auto"
 >
-	<section class="sm:min-h-full" id="hero">
+	<section class="sm:min-h-full container max-w-2xl mx-auto" id="hero">
 		<div class="grid grid-cols-1 gap-8 sm:grid-cols-2 justify-items-center">
 			<div class="mx-8">
 				<h3 class="font-display text-white text-4xl sm:text-4xl lg:text-5xl mb-8">
@@ -55,40 +53,51 @@
 	</section>
 	<section id="projects">
 		<SectionLabel class="-rotate-2 max-w-sm mx-auto" text="Web Work" />
-		<div class="mt-12 sm:mt-20 grid grid-cols-1 sm:grid-cols-3 gap-8">
-			<div class="flex flex-col gap-4 items-center">
+		<div class="mt-12 sm:mt-20 grid grid-cols-1 lg:grid-cols-3 gap-8">
+			<a
+				class="flex flex-col gap-4 items-center bg-background-light py-6 px-3 rounded-lg shadow-lg transform hover:-translate-y-2 ease-in-out duration-200 group"
+				href="projects/maletino-movement"
+			>
 				<img
-					class="inline object-cover bg-green-500 w-32 h-32 rounded-full"
+					class="inline object-cover w-32 h-32 rounded-full"
+					src="maletino-movement.png"
+					alt="Feedback app website screenshot"
+				/>
+				<h4 class="font-display text-center text-accent">Maletino Movement</h4>
+				<p class="text-center font-body text-white">
+					A personal website I created for personal fitness trainer Yolanda Maletino.
+				</p>
+			</a>
+			<a
+				class="flex flex-col gap-4 items-center bg-background-light py-6 px-3 rounded-lg shadow-lg transform hover:-translate-y-2 ease-in-out duration-200"
+				href="projects/ecommerce-model-viewer"
+			>
+				<img
+					class="inline object-cover w-32 h-32 rounded-full"
 					src="ecommerce_profile.png"
 					alt="ecommerce viewer website screenshot"
 				/>
-				<a class="font-display text-center text-accent" href="/">Ecommerce Model Viewer</a>
+				<h4 class="font-display text-center text-accent">Ecommerce Model Viewer</h4>
 				<p class="text-center font-body text-white">
-					tempor orci dapibus ultrices in iaculis nunc sed augue lacus viverra vitae
+					I created a prototype for bespoke furniture company Resident, this prototype demonstrates
+					viewing furniture models in a 3D viewport as well as in AR
 				</p>
-			</div>
-			<div class="flex flex-col gap-4 items-center">
+			</a>
+			<a
+				class="flex flex-col gap-4 items-center bg-background-light py-6 px-3 rounded-lg shadow-lg transform hover:-translate-y-2 ease-in-out duration-200"
+				href="projects/museum-web-game"
+			>
 				<img
-					class="inline object-cover bg-green-500 w-32 h-32 rounded-full"
-					src="feedback_app_profile.png"
-					alt="Feedback app website screenshot"
-				/>
-				<a class="font-display text-center text-accent" href="/">Feedback App</a>
-				<p class="text-center font-body text-white">
-					tempor orci dapibus ultrices in iaculis nunc sed augue lacus viverra vitae
-				</p>
-			</div>
-			<div class="flex flex-col gap-4 items-center">
-				<img
-					class="inline object-cover bg-green-500 w-32 h-32 rounded-full"
+					class="inline object-cover w-32 h-32 rounded-full"
 					src="treasure_hunt_profile.png"
 					alt="treasure hunt game screenshot"
 				/>
-				<a class="font-display text-center text-accent" href="/">Museum Web Game</a>
+				<h4 class="font-display text-center text-accent">Museum Web Game</h4>
 				<p class="text-center font-body text-white">
-					tempor orci dapibus ultrices in iaculis nunc sed augue lacus viverra vitae
+					For MOTAT - Museum of Transport and Technology I worked on a web-based video game as part
+					of the holiday experience Hidden in Plain Sight
 				</p>
-			</div>
+			</a>
 		</div>
 	</section>
 	<section class="mb-8" id="about">

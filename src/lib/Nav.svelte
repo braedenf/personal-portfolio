@@ -4,7 +4,7 @@
 	<div class="bg-background-light px-16 py-2 lg:py-16 lg:px-2 rounded-full shadow-lg">
 		<ul class="flex lg:flex-col gap-6 items-center">
 			<li>
-				<a href="#home">
+				<a href="/#home">
 					<svg
 						class="h-8 stroke-current text-white hover:text-accent transition duration-200"
 						viewBox="0 0 44 44"
@@ -19,7 +19,7 @@
 				</a>
 			</li>
 			<li>
-				<a href="#projects">
+				<a href="/#projects">
 					<svg
 						class="h-8 stroke-current text-white hover:text-accent transition duration-200"
 						viewBox="0 0 48 48"
@@ -36,7 +36,7 @@
 				</a>
 			</li>
 			<li>
-				<a href="#about">
+				<a href="/#about">
 					<svg
 						class="h-8 stroke-current text-white hover:text-accent transition duration-200"
 						viewBox="0 0 32 39"
