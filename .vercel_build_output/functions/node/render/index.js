@@ -6816,13 +6816,13 @@ var init_index_svelte = __esm({
 				<p class="${"text-center font-body text-white"}">I collaborated with a small personal fitness company to design a custom website with an
 					additional booking system.
 				</p></a>
-			<a class="${"flex flex-col gap-4 lg:gap-8 items-center bg-background-dark py-6 xl:py-16 px-3 lg:mx-auto rounded-lg shadow-lg transform hover:-translate-y-2 ease-in-out duration-200"}" href="${"projects/ecommerce-model-viewer"}"><img class="${"inline object-cover w-32 h-32 rounded-full"}" src="${"ecommerce_profile.png"}" alt="${"ecommerce viewer website screenshot"}">
+			<a class="${"flex flex-col gap-4 lg:gap-8 items-center bg-background-dark py-6 xl:py-16 px-3 lg:mx-auto rounded-lg shadow-lg transform hover:-translate-y-2 ease-in-out duration-200"}" href="${"projects/ecommerce-model-viewer"}"><img class="${"inline object-cover w-32 h-32 rounded-full"}" src="${"Model-Viewer/ModelViewerEcommerceProfile.png"}" alt="${"ecommerce viewer website screenshot"}">
 				<h4 class="${"font-bold text-center text-white bg-background-light px-3 rounded-full"}">Ecommerce Model Viewer
 				</h4>
 				<p class="${"text-center font-body text-white"}">I created a prototype for bespoke furniture company Resident, this prototype demonstrates
 					the ability to view furniture models in 3D and AR.
 				</p></a>
-			<a class="${"flex flex-col gap-4 lg:gap-8 items-center bg-background-dark py-6 xl:py-16 px-3 lg:mx-auto rounded-lg shadow-lg transform hover:-translate-y-2 ease-in-out duration-200"}" href="${"projects/museum-web-game"}"><img class="${"inline object-cover w-32 h-32 rounded-full"}" src="${"treasure_hunt_profile.png"}" alt="${"treasure hunt game screenshot"}">
+			<a class="${"flex flex-col gap-4 lg:gap-8 items-center bg-background-dark py-6 xl:py-16 px-3 lg:mx-auto rounded-lg shadow-lg transform hover:-translate-y-2 ease-in-out duration-200"}" href="${"projects/museum-web-game"}"><img class="${"inline object-cover w-32 h-32 rounded-full"}" src="${"MotatGame/TreasureHunt.png"}" alt="${"treasure hunt game screenshot"}">
 				<h4 class="${"font-bold text-center text-white bg-background-light px-3 rounded-full"}">Museum Web Game
 				</h4>
 				<p class="${"text-center font-body text-white"}">At MOTAT - Museum of Transport and Technology, I worked on a web-based video game as part
@@ -6860,8 +6860,8 @@ var entry3, js3, css6;
 var init__3 = __esm({
   ".svelte-kit/output/server/nodes/2.js"() {
     init_index_svelte();
-    entry3 = "pages/index.svelte-8d9b11a4.js";
-    js3 = ["pages/index.svelte-8d9b11a4.js", "chunks/vendor-6b98a0cd.js"];
+    entry3 = "pages/index.svelte-027f7374.js";
+    js3 = ["pages/index.svelte-027f7374.js", "chunks/vendor-6b98a0cd.js"];
     css6 = ["assets/pages/index.svelte-c581975f.css"];
   }
 });
@@ -8621,10 +8621,10 @@ var App = class {
 // .svelte-kit/vercel-tmp/manifest.js
 var manifest = {
   appDir: "_app",
-  assets: new Set(["blob_01.svg", "blob_02.svg", "bottom-waves.svg", "ecommerce_profile.PNG", "feedback_app_profile.PNG", "MM/milanote.png", "MM/tech-stack.png", "MMBannerDesktop-01.png", "MMBannerDesktop.png", "MMBannerMobile.png", "MMLogo.png", "Model-Viewer/ModelViewerPrototype.png", "MotatGame/TreasureMapClip.gif", "MotatGame/treasure_hunt_clip.gif", "portfolio_picture.png", "top-waves.svg", "treasure_hunt_profile.PNG"]),
+  assets: new Set(["blob_01.svg", "blob_02.svg", "bottom-waves.svg", "feedback_app_profile.PNG", "MM/milanote.png", "MM/tech-stack.png", "MMBannerDesktop-01.png", "MMBannerDesktop.png", "MMBannerMobile.png", "MMLogo.png", "Model-Viewer/ModelViewerEcommerceProfile.png", "Model-Viewer/ModelViewerPrototype.png", "MotatGame/TreasureHunt.png", "MotatGame/TreasureMapClip.gif", "MotatGame/treasure_hunt_clip.gif", "portfolio_picture.png", "top-waves.svg"]),
   _: {
     mime: { ".svg": "image/svg+xml", ".PNG": "image/png", ".png": "image/png", ".gif": "image/gif" },
-    entry: { "file": "start-3a1f52ee.js", "js": ["start-3a1f52ee.js", "chunks/vendor-6b98a0cd.js"], "css": ["assets/start-464e9d0a.css"] },
+    entry: { "file": "start-655a97f7.js", "js": ["start-655a97f7.js", "chunks/vendor-6b98a0cd.js"], "css": ["assets/start-464e9d0a.css"] },
     nodes: [
       () => Promise.resolve().then(() => (init__(), __exports)),
       () => Promise.resolve().then(() => (init__2(), __exports2)),

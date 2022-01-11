@@ -117,7 +117,7 @@
 			>
 				<img
 					class="inline object-cover w-32 h-32 rounded-full"
-					src="MOTATGame/TreasureHuntProfile.png"
+					src="MotatGame/TreasureHunt.png"
 					alt="treasure hunt game screenshot"
 				/>
 				<h4 class="font-bold text-center text-white bg-background-light px-3 rounded-full">
