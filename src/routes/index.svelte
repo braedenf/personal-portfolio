@@ -16,7 +16,7 @@
 	});
 </script>
 
-<main class="mt-20 sm:mt-40 lg:mt-48 xl:mt-72 2xl:mt-[500px] mb-20 flex flex-col  lg:mx-auto">
+<main class="mt-20 sm:mt-40 lg:mt-48 xl:mt-72 2xl:mt-[300px] mb-20 flex flex-col  lg:mx-auto">
 	<section
 		class="container px-8 mx-auto lg:mx-auto lg:max-w-4xl pb-64 sm:pb-[400px] xl:pb-[500px]"
 		id="hero"
