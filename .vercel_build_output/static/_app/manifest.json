@@ -1,10 +1,10 @@
 {
   ".svelte-kit/build/runtime/internal/start.js": {
-    "file": "start-e2eb2e23.js",
+    "file": "start-1d285f9d.js",
     "src": ".svelte-kit/build/runtime/internal/start.js",
     "isEntry": true,
     "imports": [
-      "_vendor-9c584af2.js"
+      "_vendor-2be43ebe.js"
     ],
     "dynamicImports": [
       "src/routes/__layout.svelte",
@@ -19,75 +19,75 @@
     ]
   },
   "src/routes/__layout.svelte": {
-    "file": "pages/__layout.svelte-729dd3fa.js",
+    "file": "pages/__layout.svelte-4304f846.js",
     "src": "src/routes/__layout.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-9c584af2.js"
+      "_vendor-2be43ebe.js"
     ],
     "css": [
       "assets/pages/__layout.svelte-feb947b6.css"
     ]
   },
   ".svelte-kit/build/components/error.svelte": {
-    "file": "error.svelte-4db74749.js",
+    "file": "error.svelte-242cd7ea.js",
     "src": ".svelte-kit/build/components/error.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-9c584af2.js"
+      "_vendor-2be43ebe.js"
     ]
   },
   "src/routes/index.svelte": {
-    "file": "pages/index.svelte-ca5cff43.js",
+    "file": "pages/index.svelte-4d869abb.js",
     "src": "src/routes/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-9c584af2.js"
+      "_vendor-2be43ebe.js"
     ],
     "css": [
       "assets/pages/index.svelte-c581975f.css"
     ]
   },
   "src/routes/projects/ecommerce-model-viewer.svelte": {
-    "file": "pages/projects/ecommerce-model-viewer.svelte-8f150ee4.js",
+    "file": "pages/projects/ecommerce-model-viewer.svelte-e52c9d9a.js",
     "src": "src/routes/projects/ecommerce-model-viewer.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-9c584af2.js",
-      "_ProjectPage-f20042de.js"
+      "_vendor-2be43ebe.js",
+      "_ProjectPage-2f9c047c.js"
     ]
   },
   "src/routes/projects/maletino-movement.svelte": {
-    "file": "pages/projects/maletino-movement.svelte-5dd15b05.js",
+    "file": "pages/projects/maletino-movement.svelte-8bd6ee71.js",
     "src": "src/routes/projects/maletino-movement.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-9c584af2.js",
-      "_ProjectPage-f20042de.js"
+      "_vendor-2be43ebe.js",
+      "_ProjectPage-2f9c047c.js"
     ]
   },
   "src/routes/projects/museum-web-game.svelte": {
-    "file": "pages/projects/museum-web-game.svelte-48ae7fff.js",
+    "file": "pages/projects/museum-web-game.svelte-24202c02.js",
     "src": "src/routes/projects/museum-web-game.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-9c584af2.js",
-      "_ProjectPage-f20042de.js"
+      "_vendor-2be43ebe.js",
+      "_ProjectPage-2f9c047c.js"
     ]
   },
-  "_vendor-9c584af2.js": {
-    "file": "chunks/vendor-9c584af2.js"
+  "_vendor-2be43ebe.js": {
+    "file": "chunks/vendor-2be43ebe.js"
   },
-  "_ProjectPage-f20042de.js": {
-    "file": "chunks/ProjectPage-f20042de.js",
+  "_ProjectPage-2f9c047c.js": {
+    "file": "chunks/ProjectPage-2f9c047c.js",
     "imports": [
-      "_vendor-9c584af2.js"
+      "_vendor-2be43ebe.js"
     ]
   }
 }

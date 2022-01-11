@@ -5571,7 +5571,9 @@ var init_layout_svelte = __esm({
     };
     _layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       $$result.css.add(css2);
-      return `<header id="${"home"}"><div class="${"spacer layer1 -z-20 top-0 svelte-app492"}"></div>
+      return `${$$result.head += `<meta name="${"description"}" content="${"I am a creative technologist that specialises in web technologies. I love to tinker and experiment with creating engaging iteractive experiences."}" data-svelte="svelte-jf7ror"><meta property="${"og:image"}" content="${"portfolio_picture.jpg"}" data-svelte="svelte-jf7ror">${$$result.title = `<title>Braeden Developer Portfolio</title>`, ""}`, ""}
+
+<header id="${"home"}"><div class="${"spacer layer1 -z-20 top-0 svelte-app492"}"></div>
 	<section id="${"header"}"><a href="${"/"}" class="${"flex flex-col gap-2 lg:gap-4 items-center text-center"}"><h1 class="${"text-white font-bold text-5xl lg:text-6xl xl:text-7xl pt-32 sm:pt-6"}">Braeden Foster
 			</h1>
 			<h2 class="${"font-display lg:text-2xl text-white"}">Web Designer / Creative Technologist</h2></a></section></header>
@@ -5604,8 +5606,8 @@ var entry, js, css3;
 var init__ = __esm({
   ".svelte-kit/output/server/nodes/0.js"() {
     init_layout_svelte();
-    entry = "pages/__layout.svelte-729dd3fa.js";
-    js = ["pages/__layout.svelte-729dd3fa.js", "chunks/vendor-9c584af2.js"];
+    entry = "pages/__layout.svelte-4304f846.js";
+    js = ["pages/__layout.svelte-4304f846.js", "chunks/vendor-2be43ebe.js"];
     css3 = ["assets/pages/__layout.svelte-feb947b6.css"];
   }
 });
@@ -5654,8 +5656,8 @@ var entry2, js2, css4;
 var init__2 = __esm({
   ".svelte-kit/output/server/nodes/1.js"() {
     init_error_svelte();
-    entry2 = "error.svelte-4db74749.js";
-    js2 = ["error.svelte-4db74749.js", "chunks/vendor-9c584af2.js"];
+    entry2 = "error.svelte-242cd7ea.js";
+    js2 = ["error.svelte-242cd7ea.js", "chunks/vendor-2be43ebe.js"];
     css4 = [];
   }
 });
@@ -6908,8 +6910,8 @@ var entry3, js3, css6;
 var init__3 = __esm({
   ".svelte-kit/output/server/nodes/2.js"() {
     init_index_svelte();
-    entry3 = "pages/index.svelte-ca5cff43.js";
-    js3 = ["pages/index.svelte-ca5cff43.js", "chunks/vendor-9c584af2.js"];
+    entry3 = "pages/index.svelte-4d869abb.js";
+    js3 = ["pages/index.svelte-4d869abb.js", "chunks/vendor-2be43ebe.js"];
     css6 = ["assets/pages/index.svelte-c581975f.css"];
   }
 });
@@ -6992,8 +6994,8 @@ var entry4, js4, css7;
 var init__4 = __esm({
   ".svelte-kit/output/server/nodes/3.js"() {
     init_ecommerce_model_viewer_svelte();
-    entry4 = "pages/projects/ecommerce-model-viewer.svelte-8f150ee4.js";
-    js4 = ["pages/projects/ecommerce-model-viewer.svelte-8f150ee4.js", "chunks/vendor-9c584af2.js", "chunks/ProjectPage-f20042de.js"];
+    entry4 = "pages/projects/ecommerce-model-viewer.svelte-e52c9d9a.js";
+    js4 = ["pages/projects/ecommerce-model-viewer.svelte-e52c9d9a.js", "chunks/vendor-2be43ebe.js", "chunks/ProjectPage-2f9c047c.js"];
     css7 = [];
   }
 });
@@ -7057,8 +7059,8 @@ var entry5, js5, css8;
 var init__5 = __esm({
   ".svelte-kit/output/server/nodes/4.js"() {
     init_maletino_movement_svelte();
-    entry5 = "pages/projects/maletino-movement.svelte-5dd15b05.js";
-    js5 = ["pages/projects/maletino-movement.svelte-5dd15b05.js", "chunks/vendor-9c584af2.js", "chunks/ProjectPage-f20042de.js"];
+    entry5 = "pages/projects/maletino-movement.svelte-8bd6ee71.js";
+    js5 = ["pages/projects/maletino-movement.svelte-8bd6ee71.js", "chunks/vendor-2be43ebe.js", "chunks/ProjectPage-2f9c047c.js"];
     css8 = [];
   }
 });
@@ -7114,8 +7116,8 @@ var entry6, js6, css9;
 var init__6 = __esm({
   ".svelte-kit/output/server/nodes/5.js"() {
     init_museum_web_game_svelte();
-    entry6 = "pages/projects/museum-web-game.svelte-48ae7fff.js";
-    js6 = ["pages/projects/museum-web-game.svelte-48ae7fff.js", "chunks/vendor-9c584af2.js", "chunks/ProjectPage-f20042de.js"];
+    entry6 = "pages/projects/museum-web-game.svelte-24202c02.js";
+    js6 = ["pages/projects/museum-web-game.svelte-24202c02.js", "chunks/vendor-2be43ebe.js", "chunks/ProjectPage-2f9c047c.js"];
     css9 = [];
   }
 });
@@ -8553,7 +8555,7 @@ var user_hooks = /* @__PURE__ */ Object.freeze({
   __proto__: null,
   [Symbol.toStringTag]: "Module"
 });
-var template = ({ head, body, assets: assets2 }) => '<!DOCTYPE html>\r\n<html lang="en">\r\n	<head>\r\n		<meta charset="utf-8" />\r\n		<link rel="icon" href="/favicon.png" />\r\n		<link rel="preconnect" href="https://fonts.googleapis.com" />\r\n		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />\r\n		<link\r\n			href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@700;900&family=Quicksand&display=swap"\r\n			rel="stylesheet"\r\n		/>\r\n		<link\r\n			href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@400;700&display=swap"\r\n			rel="stylesheet"\r\n		/>\r\n		<meta name="viewport" content="width=device-width, initial-scale=1.0" />\r\n		<title>Braeden Developer Portfolio</title>\r\n		' + head + '\r\n	</head>\r\n	<body class="bg-background-dark">\r\n		<div id="svelte">' + body + "</div>\r\n	</body>\r\n\r\n	<style>\r\n		html {\r\n			scroll-behavior: smooth;\r\n		}\r\n	</style>\r\n</html>\r\n";
+var template = ({ head, body, assets: assets2 }) => '<!DOCTYPE html>\r\n<html lang="en">\r\n	<head>\r\n		<meta charset="utf-8" />\r\n		<link rel="icon" href="/favicon.png" />\r\n\r\n		<link rel="preconnect" href="https://fonts.googleapis.com" />\r\n		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />\r\n		<link\r\n			href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@700;900&family=Quicksand&display=swap"\r\n			rel="stylesheet"\r\n		/>\r\n		<link\r\n			href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@400;700&display=swap"\r\n			rel="stylesheet"\r\n		/>\r\n		<meta name="viewport" content="width=device-width, initial-scale=1.0" />\r\n\r\n		' + head + '\r\n	</head>\r\n	<body class="bg-background-dark">\r\n		<div id="svelte">' + body + "</div>\r\n	</body>\r\n\r\n	<style>\r\n		html {\r\n			scroll-behavior: smooth;\r\n		}\r\n	</style>\r\n</html>\r\n";
 var read = null;
 set_paths({ "base": "", "assets": "" });
 var get_hooks = (hooks) => ({
@@ -8606,10 +8608,10 @@ var App = class {
 // .svelte-kit/vercel-tmp/manifest.js
 var manifest = {
   appDir: "_app",
-  assets: new Set(["blob_01.svg", "blob_02.svg", "bottom-waves.svg", "feedback_app_profile.PNG", "MM/milanote.png", "MM/tech-stack.png", "MMBannerDesktop-01.png", "MMBannerDesktop.png", "MMBannerMobile.png", "MMLogo.png", "Model-Viewer/ModelViewerEcommerceProfile.png", "Model-Viewer/ModelViewerPrototype.png", "MotatGame/TreasureHunt.png", "MotatGame/TreasureMapClip.gif", "MotatGame/treasure_hunt_clip.gif", "portfolio_picture.png", "top-waves.svg"]),
+  assets: new Set(["blob_01.svg", "blob_02.svg", "bottom-waves.svg", "favicon.png", "MM/milanote.png", "MM/tech-stack.png", "MMBannerDesktop-01.png", "MMBannerDesktop.png", "MMBannerMobile.png", "MMLogo.png", "Model-Viewer/ModelViewerEcommerceProfile.png", "Model-Viewer/ModelViewerPrototype.png", "MotatGame/TreasureHunt.png", "MotatGame/TreasureMapClip.gif", "MotatGame/treasure_hunt_clip.gif", "portfolio_picture.png", "top-waves.svg"]),
   _: {
-    mime: { ".svg": "image/svg+xml", ".PNG": "image/png", ".png": "image/png", ".gif": "image/gif" },
-    entry: { "file": "start-e2eb2e23.js", "js": ["start-e2eb2e23.js", "chunks/vendor-9c584af2.js"], "css": ["assets/start-464e9d0a.css"] },
+    mime: { ".svg": "image/svg+xml", ".png": "image/png", ".gif": "image/gif" },
+    entry: { "file": "start-1d285f9d.js", "js": ["start-1d285f9d.js", "chunks/vendor-2be43ebe.js"], "css": ["assets/start-464e9d0a.css"] },
     nodes: [
       () => Promise.resolve().then(() => (init__(), __exports)),
       () => Promise.resolve().then(() => (init__2(), __exports2)),
