@@ -1,12 +1,10 @@
-<nav
-	class="fixed bottom-2 sm:bottom-6 lg:bottom-[40%] lg:left-0 2xl:left-[8%] w-full flex justify-center lg:justify-start lg:align-middle overflow-x-auto"
->
-	<div class="bg-background-light px-16 py-2 lg:py-16 lg:px-2 rounded-full shadow-lg">
-		<ul class="flex lg:flex-col gap-6 items-center">
+<nav class="max-w-sm mx-auto lg:max-w-none lg:mx-2 2xl:mx-24 sticky bottom-2 lg:bottom-1/3 lg:w-12">
+	<div class="bg-background-light px-16 py-2 lg:px-2 lg:py-16 rounded-full shadow-lg">
+		<ul class="flex lg:flex-col justify-center items-center gap-6">
 			<li>
 				<a href="/#home">
 					<svg
-						class="h-8 stroke-current text-white hover:text-accent transition duration-200"
+						class="h-8 stroke-current text-secondary-darker hover:text-secondary transition duration-200"
 						viewBox="0 0 44 44"
 						fill="none"
 						xmlns="http://www.w3.org/2000/svg"
@@ -21,7 +19,7 @@
 			<li>
 				<a href="/#projects">
 					<svg
-						class="h-8 stroke-current text-white hover:text-accent transition duration-200"
+						class="h-8 stroke-current text-secondary-darker hover:text-secondary transition duration-200"
 						viewBox="0 0 48 48"
 						fill="none"
 						xmlns="http://www.w3.org/2000/svg"
@@ -38,7 +36,7 @@
 			<li>
 				<a href="/#about">
 					<svg
-						class="h-8 stroke-current text-white hover:text-accent transition duration-200"
+						class="h-8 stroke-current text-secondary-darker hover:text-secondary transition duration-200"
 						viewBox="0 0 32 39"
 						fill="none"
 						xmlns="http://www.w3.org/2000/svg"

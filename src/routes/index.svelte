@@ -1,75 +1,96 @@
 <script>
 	import SectionLabel from '$lib/SectionLabel.svelte';
-	import { text } from 'svelte/internal';
+	import KUTE from 'kute.js';
+	import { onMount } from 'svelte';
 
-	let scrollY;
+	onMount(() => {
+		const tween = KUTE.fromTo(
+			'#blob1',
+			{ path: '#blob1' },
+			{ path: '#blob2' },
+			{ repeat: 999, duration: 8000, yoyo: true }
+		);
+
+		tween.start();
+	});
 </script>
 
-<svelte:window bind:scrollY />
-
-<header id="home">
-	<section id="header">
-		<div class="flex flex-col gap-2 lg:gap-4 items-center text-center mt-4 lg:mt-8">
-			<h1 class="font-display text-4xl lg:text-6xl text-white">Braeden Foster</h1>
-			<h2 class="font-display lg:text-2xl text-accent">Web Designer / Creative Technologist</h2>
-		</div>
-	</section>
-	<div class="absolute top-0 left-0 w-full overflow-hidden z-[-10]">
+<main class="mt-20 sm:mt-40 lg:mt-48 xl:mt-72 2xl:mt-[500px] mb-20 flex flex-col  lg:mx-auto">
+	<section
+		class="container px-8 mx-auto lg:mx-auto lg:max-w-4xl pb-64 sm:pb-[400px] xl:pb-[500px]"
+		id="hero"
+	>
 		<svg
-			class="relative block w-full h-[10em] lg:h-[15em]"
-			viewBox="0 0 1440 417"
-			fill="none"
-			preserveAspectRatio="none"
-		>
-			<path
-				d="M582 393.5C225 393.5 0 320 0 320V0H1440V417C1228 284.5 939 393.5 582 393.5Z"
-				fill="#4C546F"
-			/>
+			class="opacity-20 blob-motion -z-30 w-[40%] sm:w-[50%]"
+			id="visual"
+			viewBox="0 0 900 900"
+			width="900"
+			height="900"
+			xmlns="http://www.w3.org/2000/svg"
+			xmlns:xlink="http://www.w3.org/1999/xlink"
+			version="1.1"
+			><g transform="translate(452.16122828917685 383.88346016249517)"
+				><path
+					id="blob1"
+					d="M249.6 -220.4C316.2 -182.9 358.1 -91.5 358.5 0.4C358.8 92.2 317.7 184.3 251 259.3C184.3 334.3 92.2 392.2 12.1 380C-67.9 367.9 -135.8 285.8 -205.6 210.8C-275.4 135.8 -347.2 67.9 -360.5 -13.3C-373.8 -94.5 -328.7 -189 -258.9 -226.5C-189 -264 -94.5 -244.5 -1.5 -243C91.5 -241.5 182.9 -257.9 249.6 -220.4"
+					fill="#F2545B"
+				/></g
+			>
+			<g transform="translate(485.8818936096409 484.65017177881225)" style="visibility: hidden;"
+				><path
+					id="blob2"
+					d="M152.1 -166.6C198.1 -106.1 237 -53 260.6 23.6C284.2 100.2 292.3 200.3 246.3 240.7C200.3 281 100.2 261.5 12.5 249C-75.2 236.5 -150.4 231 -214.4 190.7C-278.4 150.4 -331.2 75.2 -346.6 -15.4C-362.1 -106.1 -340.1 -212.1 -276.1 -272.6C-212.1 -333.1 -106.1 -348.1 -26.5 -321.6C53 -295 106.1 -227.1 152.1 -166.6"
+					fill="#F2545B"
+				/></g
+			>
 		</svg>
-	</div>
-</header>
-
-<main
-	class="mt-20 lg:mt-48 mb-20 flex flex-col gap-28 max-w-4xl xl:max-w-6xl mx-4 sm:mx-12 lg:mx-auto"
->
-	<section class="sm:min-h-full container max-w-2xl mx-auto" id="hero">
-		<div class="grid grid-cols-1 gap-8 sm:grid-cols-2 justify-items-center">
-			<div class="mx-8">
-				<h3 class="font-display text-white text-4xl sm:text-4xl lg:text-5xl mb-8">
-					Welcome to my portfolio.
-				</h3>
-				<p class="font-body text-white text-lg">
-					I’m a frontend developer and creative technologist. I experiment and play with web
-					technologies to create rich user experiences.
+		<div class="grid grid-cols-1 gap-8 lg:gap-3 sm:grid-cols-3 justify-items-center">
+			<div class="col-span-2">
+				<h2
+					class="font-display text-white font-bold text-4xl sm:text-5xl lg:text-6xl xl:text-8xl mb-8"
+				>
+					Welcome to my <span class="text-secondary">portfolio</span>
+				</h2>
+				<p
+					class="font-body text-white text-lg border-t-2 pt-2 border-l-0 border-r-0 border-b-0 border-primary border-2"
+				>
+					I’m a frontend developer and creative technologist based in Tāmaki Makaurau, Aotearoa -
+					Auckland New Zealand. I design and experiment with web technologies to create rich user
+					experiences.
 				</p>
 			</div>
 
 			<img
-				class="inline object-cover w-4/6 max-w-[16em] rounded-full shadow-lg"
+				class="object-left rounded-full shadow-lg h-52 sm:h-56 lg:h-64 xl:h-72⌈"
 				src="portfolio_picture.png"
 				alt="profile of me"
 			/>
 		</div>
 	</section>
-	<section id="projects">
-		<SectionLabel class="-rotate-2 max-w-sm mx-auto" text="Web Work" />
-		<div class="mt-12 sm:mt-20 grid grid-cols-1 lg:grid-cols-3 gap-8">
+	<section class="mt-16 pt-16 bg-gradient-to-r from-secondary-darker to-secondary" id="projects">
+		<SectionLabel class="-rotate-2 bg-background-dark max-w-sm mx-auto" text="Web Work" />
+		<div
+			class="py-16 lg:py-[200px] sm:mt-20 grid grid-cols-1 lg:grid-cols-3 gap-8 px-8 max-w-4xl lg:max-w-5xl xl:max-w-6xl mx-auto"
+		>
 			<a
-				class="flex flex-col gap-4 items-center bg-background-light py-6 px-3 rounded-lg shadow-lg transform hover:-translate-y-2 ease-in-out duration-200 group"
+				class="flex flex-col gap-4 lg:gap-8 items-center bg-background-dark py-6 xl:py-16 px-3 lg:mx-auto rounded-lg shadow-lg transform hover:-translate-y-2 ease-in-out duration-200"
 				href="projects/maletino-movement"
 			>
 				<img
 					class="inline object-cover w-32 h-32 rounded-full"
-					src="maletino-movement.png"
-					alt="Feedback app website screenshot"
+					src="MMLogo.png"
+					alt="MaletinoMovement Logo"
 				/>
-				<h4 class="font-display text-center text-accent">Maletino Movement</h4>
+				<h4 class="font-bold text-center text-white bg-background-light px-3 rounded-full">
+					Maletino Movement
+				</h4>
 				<p class="text-center font-body text-white">
-					A personal website I created for personal fitness trainer Yolanda Maletino.
+					I collaborated with a small personal fitness company to design a custom website with an
+					additional booking system.
 				</p>
 			</a>
 			<a
-				class="flex flex-col gap-4 items-center bg-background-light py-6 px-3 rounded-lg shadow-lg transform hover:-translate-y-2 ease-in-out duration-200"
+				class="flex flex-col gap-4 lg:gap-8 items-center bg-background-dark py-6 xl:py-16 px-3 lg:mx-auto rounded-lg shadow-lg transform hover:-translate-y-2 ease-in-out duration-200"
 				href="projects/ecommerce-model-viewer"
 			>
 				<img
@@ -77,14 +98,16 @@
 					src="ecommerce_profile.png"
 					alt="ecommerce viewer website screenshot"
 				/>
-				<h4 class="font-display text-center text-accent">Ecommerce Model Viewer</h4>
+				<h4 class="font-bold text-center text-white bg-background-light px-3 rounded-full">
+					Ecommerce Model Viewer
+				</h4>
 				<p class="text-center font-body text-white">
 					I created a prototype for bespoke furniture company Resident, this prototype demonstrates
-					viewing furniture models in a 3D viewport as well as in AR
+					the ability to view furniture models in 3D and AR.
 				</p>
 			</a>
 			<a
-				class="flex flex-col gap-4 items-center bg-background-light py-6 px-3 rounded-lg shadow-lg transform hover:-translate-y-2 ease-in-out duration-200"
+				class="flex flex-col gap-4 lg:gap-8 items-center bg-background-dark py-6 xl:py-16 px-3 lg:mx-auto rounded-lg shadow-lg transform hover:-translate-y-2 ease-in-out duration-200"
 				href="projects/museum-web-game"
 			>
 				<img
@@ -92,79 +115,43 @@
 					src="treasure_hunt_profile.png"
 					alt="treasure hunt game screenshot"
 				/>
-				<h4 class="font-display text-center text-accent">Museum Web Game</h4>
+				<h4 class="font-bold text-center text-white bg-background-light px-3 rounded-full">
+					Museum Web Game
+				</h4>
 				<p class="text-center font-body text-white">
-					For MOTAT - Museum of Transport and Technology I worked on a web-based video game as part
-					of the holiday experience Hidden in Plain Sight
+					At MOTAT - Museum of Transport and Technology, I worked on a web-based video game as part
+					of the holiday experience Hidden in Plain Sight.
 				</p>
 			</a>
 		</div>
 	</section>
-	<section class="mb-8" id="about">
-		<SectionLabel class="rotate-2 max-w-sm mx-auto" text="About" />
-		<p class="mt-20 tex-body text-white">
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-			labore et dolore magna aliqua. Leo vel fringilla est ullamcorper eget nulla facilisi etiam
-			dignissim. Sed id semper risus in hendrerit gravida rutrum quisque non. Feugiat vivamus at
-			augue eget.
+	<section class="pt-16 sm:mt-32" id="about">
+		<SectionLabel class="rotate-2 bg-primary max-w-sm mx-auto" text="About" />
+		<p class="mt-20 text-white max-w-2xl mx-auto px-8">
+			I am a creative technologist based in Tāmaki Makaurau, Aotearoa - Auckland New Zealand. From a
+			young age, I have been inquisitive about all kinds of technologies, with an interest in
+			hacking & remixing these technologies to discover new concepts.
+		</p>
+		<p class="text-white max-w-2xl mx-auto px-8 mt-6">
+			My interests have led me to work with many great collaborations such as with artists,
+			musicians, academics, museums and game designers. Recently, I have become more interested in
+			the use of front-end technologies such as React or Svelte to create dynamic & portable
+			experiences.
+		</p>
+		<p class=" text-white max-w-2xl mx-auto px-8 mt-6">
+			When I am not hacking & remaking, you can find me skateboarding or surfing.
 		</p>
 	</section>
 </main>
-<footer>
-	<div class="flex flex-col justify-center items-center gap-4">
-		<a
-			target="_blank"
-			class="font-display text-accent hover:text-accent-light transition"
-			href="mailto: braedenleefoster@gmail.com">braedenleefoster@gmail.com</a
-		>
-		<div class="flex gap-4">
-			<a target="_blank" href="https://www.linkedin.com/in/braeden-foster-30b120116/">
-				<svg
-					class="w-12 h-12 fill-current text-background-secondary hover:text-background-secondary-active transition"
-					viewBox="0 0 56 56"
-					fill="none"
-					xmlns="http://www.w3.org/2000/svg"
-				>
-					<circle cx="28" cy="28" r="28" />
-					<path
-						fill-rule="evenodd"
-						clip-rule="evenodd"
-						d="M37.9167 11H18.0833C14.1719 11 11 14.1719 11 18.0833V37.9167C11 41.8281 14.1719 45 18.0833 45H37.9167C41.8295 45 45 41.8281 45 37.9167V18.0833C45 14.1719 41.8295 11 37.9167 11ZM22.3333 37.9167H18.0833V22.3333H22.3333V37.9167ZM20.2083 20.537C18.8398 20.537 17.7292 19.4178 17.7292 18.038C17.7292 16.6582 18.8398 15.539 20.2083 15.539C21.5768 15.539 22.6875 16.6582 22.6875 18.038C22.6875 19.4178 21.5782 20.537 20.2083 20.537ZM39.3333 37.9167H35.0833V29.9777C35.0833 25.2063 29.4167 25.5676 29.4167 29.9777V37.9167H25.1667V22.3333H29.4167V24.8338C31.3943 21.1703 39.3333 20.8997 39.3333 28.3414V37.9167Z"
-						fill="#3E4253"
-					/>
-				</svg>
-			</a>
-			<a target="_blank" href="https://github.com/braedenf">
-				<svg
-					class="w-12 h-12 fill-current text-background-secondary hover:text-background-secondary-active transition"
-					viewBox="0 0 56 56"
-					xmlns="http://www.w3.org/2000/svg"
-				>
-					<circle cx="28" cy="28" r="28" />
-					<ellipse cx="21.1321" cy="33.283" rx="3.69811" ry="5.81132" fill="#3E4253" />
-					<ellipse cx="35.9246" cy="33.283" rx="3.69811" ry="5.81132" fill="#3E4253" />
-					<path
-						fill-rule="evenodd"
-						clip-rule="evenodd"
-						d="M12.1997 11.6201C11.5098 12.8281 10.352 15.6819 11.4579 21.3501C9.57083 23.8654 8.45282 26.9908 8.45282 30.3772C8.45282 38.6928 15.1939 45.4338 23.5094 45.4338H32.4906C40.8061 45.4338 47.5472 38.6928 47.5472 30.3772C47.5472 26.9908 46.4292 23.8654 44.5421 21.3502C45.648 15.6819 44.4902 12.8281 43.8003 11.6201C43.5836 11.2406 43.1215 11.069 42.6998 11.1835C41.1172 11.613 39.2865 12.3397 37.1488 15.3069C35.3582 14.6829 32.0496 14.2641 28.2642 14.2641C24.1641 14.2641 20.6234 14.7554 18.9651 15.4667C16.7784 12.3655 14.9108 11.6206 13.3002 11.1835C12.8785 11.069 12.4164 11.2406 12.1997 11.6201ZM23.6164 26.0357C18.5287 25.7423 12 26.6766 12 31.7727V34.3636C12 39.1333 16.3415 42.9999 21.697 42.9999H34.303C39.6585 42.9999 44 39.1333 44 34.3636V31.7727C44 26.6766 37.4713 25.7423 32.3836 26.0357C30.9878 26.1162 29.5179 26.1592 28 26.1592C26.4821 26.1592 25.0122 26.1162 23.6164 26.0357Z"
-						fill="#3E4253"
-					/>
-				</svg>
-			</a>
-		</div>
-		<div class="absolute w-full overflow-hidden z-[-10]">
-			<svg
-				class="relative block w-full h-[16em] lg:h-[15em]"
-				viewBox="0 0 1440 387"
-				fill="none"
-				xmlns="http://www.w3.org/2000/svg"
-				preserveAspectRatio="none"
-			>
-				<path
-					d="M824.129 71C1064.47 51.5659 1205.52 39.5001 1440 47.5001L1440 387L0 387L3.38326e-05 -3.81849e-06C345.283 106 650.992 85 824.129 71Z"
-					fill="#4C546F"
-				/>
-			</svg>
-		</div>
-	</div>
-</footer>
+
+<style>
+	.blob-motion {
+		position: absolute;
+		display: inline-block;
+		transform: translateY(-40%);
+		transform: translateX(20%);
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+	}
+</style>

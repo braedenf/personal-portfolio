@@ -4,22 +4,24 @@ const config = {
 
 	theme: {
 		fontFamily: {
-			sans: ['Quicksand', 'ui-sans-serif', 'system-ui'],
+			sans: ['Lexend Deca', 'ui-sans-serif', 'system-ui'],
 			serif: ['ui-serif', 'Georgia'],
 			mono: ['ui-monospace', 'SFMono-Regular'],
-			display: ['Maven Pro', 'ui-sans-serif', 'system-ui'],
-			body: ['Quicksand', 'ui-sans-serif', 'system-ui']
+			display: ['Lexend Deca', 'ui-sans-serif', 'system-ui'],
+			body: ['Lexend Deca', 'ui-sans-serif', 'system-ui']
 		},
 		extend: {
 			colors: {
 				background: {
-					light: '#4C546F',
-					dark: '#3E4253',
+					light: '#3E5057',
+					dark: '#19323C',
 					secondary: '#EDE5D5',
-					'secondary-active': '#FFE4B0'
+					'secondary-active': '#FFE4B0',
+					highlight: '#F2545B'
 				},
-				accent: '#EDAA6D',
-				'accent-light': '#E9CBAF'
+				primary: '#FF737A',
+				secondary: '#55F27D',
+				'secondary-darker': '#3EB35B'
 			}
 		}
 	},
