@@ -24,14 +24,14 @@
 	<p class="leading-relaxed text-lg mb-4 lg:mb-8">
 		The outcome was a close collaboration between myself and MOTAT's graphic designer.
 	</p>
-	<h2 class="text-primary font-bold text-2xl lg:text-3xl pb-4">Adapting through COVID-19</h2>
+	<h2 class="text-primary font-bold text-2xl lg:text-3xl py-6">Adapting through COVID-19</h2>
 
 	<p class="leading-relaxed text-lg mb-4 lg:mb-8">
 		The purpose of this game was to create more accessibility for families and children, who were
 		unable to visit the museum physically due to COVID-19 restrictions. I aimed to include iconic
 		landmarks found at the museum to serve as the background for the platformer game.
 	</p>
-	<h2 class="text-primary font-bold text-2xl lg:text-3xl pb-4">Developing the Game</h2>
+	<h2 class="text-primary font-bold text-2xl lg:text-3xl py-6">Developing the Game</h2>
 	<p class="leading-relaxed text-lg mb-4 lg:mb-8">
 		The game was built using the open-source game engine called <a
 			target="_blank"

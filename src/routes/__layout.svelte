@@ -1,5 +1,6 @@
 <script>
 	import Nav from '$lib/Nav.svelte';
+	import CopyEmailButton from '$lib/CopyEmailButton.svelte';
 	import '../app.css';
 </script>
 
@@ -22,11 +23,7 @@
 	<div class="flex flex-col justify-center items-center gap-4">
 		<div class="spacer layer2 -z-10" />
 
-		<a
-			target="_blank"
-			class="font-bold text-white text-lg hover:text-secondary transition"
-			href="mailto: braedenleefoster@gmail.com">braedenleefoster@gmail.com</a
-		>
+		<CopyEmailButton class="my-12" email="braedenleefoster@gmail.com" />
 		<div class="flex gap-4">
 			<a
 				target="_blank"

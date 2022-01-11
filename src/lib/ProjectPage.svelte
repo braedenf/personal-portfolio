@@ -21,7 +21,7 @@
 				/>
 				<div>
 					<div>
-						<a class="inline-flex items-center text-lg group" href="/#projects"
+						<a class="inline-flex items-center text-lg group my-6" href="/#projects"
 							><svg
 								fill="none"
 								stroke="currentColor"

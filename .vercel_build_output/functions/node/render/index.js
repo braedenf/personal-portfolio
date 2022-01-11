@@ -63,7 +63,7 @@ var __privateSet = (obj, member, value, setter) => {
   return value;
 };
 
-// node_modules/.pnpm/@sveltejs+kit@1.0.0-next.223_svelte@3.44.1/node_modules/@sveltejs/kit/dist/chunks/multipart-parser.js
+// node_modules/@sveltejs/kit/dist/chunks/multipart-parser.js
 var multipart_parser_exports = {};
 __export(multipart_parser_exports, {
   toFormData: () => toFormData
@@ -157,7 +157,7 @@ async function toFormData(Body2, ct) {
 }
 var import_node_fs, import_node_path, import_node_worker_threads, import_node_http, import_node_https, import_node_zlib, import_node_stream, import_node_util, import_node_url, import_net, s, S, f, F, LF, CR, SPACE, HYPHEN, COLON, A, Z, lower, noop, MultipartParser;
 var init_multipart_parser = __esm({
-  "node_modules/.pnpm/@sveltejs+kit@1.0.0-next.223_svelte@3.44.1/node_modules/@sveltejs/kit/dist/chunks/multipart-parser.js"() {
+  "node_modules/@sveltejs/kit/dist/chunks/multipart-parser.js"() {
     import_node_fs = __toModule(require("fs"));
     import_node_path = __toModule(require("path"));
     import_node_worker_threads = __toModule(require("worker_threads"));
@@ -434,7 +434,7 @@ var init_multipart_parser = __esm({
   }
 });
 
-// node_modules/.pnpm/@sveltejs+kit@1.0.0-next.223_svelte@3.44.1/node_modules/@sveltejs/kit/dist/install-fetch.js
+// node_modules/@sveltejs/kit/dist/install-fetch.js
 function dataUriToBuffer(uri) {
   if (!/^data:/i.test(uri)) {
     throw new TypeError('`uri` does not appear to be a Data URI (must begin with "data:")');
@@ -931,7 +931,7 @@ function __fetch_polyfill() {
 }
 var import_node_http2, import_node_https2, import_node_zlib2, import_node_stream2, import_node_util2, import_node_url2, import_net2, commonjsGlobal, ponyfill_es2018, POOL_SIZE$1, POOL_SIZE, _parts, _type, _size, _a, _Blob, Blob, Blob$1, _lastModified, _name, _a2, _File, File, t, i, h, r, m, f2, e, x, _d, _a3, FormData, FetchBaseError, FetchError, NAME, isURLSearchParameters, isBlob, isAbortSignal, INTERNALS$2, Body, clone, getNonSpecFormDataBoundary, extractContentType, getTotalBytes, writeToStream, validateHeaderName, validateHeaderValue, Headers2, redirectStatus, isRedirect, INTERNALS$1, Response2, getSearch, ReferrerPolicy, DEFAULT_REFERRER_POLICY, INTERNALS, isRequest, Request2, getNodeRequestOptions, AbortError, supportedSchemas;
 var init_install_fetch = __esm({
-  "node_modules/.pnpm/@sveltejs+kit@1.0.0-next.223_svelte@3.44.1/node_modules/@sveltejs/kit/dist/install-fetch.js"() {
+  "node_modules/@sveltejs/kit/dist/install-fetch.js"() {
     import_node_http2 = __toModule(require("http"));
     import_node_https2 = __toModule(require("https"));
     import_node_zlib2 = __toModule(require("zlib"));
@@ -5418,7 +5418,7 @@ var init_install_fetch = __esm({
   }
 });
 
-// .svelte-kit/output/server/chunks/index-071795bc.js
+// .svelte-kit/output/server/chunks/index-63796eb4.js
 function run(fn) {
   return fn();
 }
@@ -5427,6 +5427,9 @@ function blank_object() {
 }
 function run_all(fns) {
   fns.forEach(run);
+}
+function null_to_empty(value) {
+  return value == null ? "" : value;
 }
 function set_current_component(component) {
   current_component = component;
@@ -5487,12 +5490,38 @@ function create_ssr_component(fn) {
 function add_attribute(name, value, boolean) {
   if (value == null || boolean && !value)
     return "";
-  return ` ${name}${value === true ? "" : `=${typeof value === "string" ? JSON.stringify(escape(value)) : `"${value}"`}`}`;
+  return ` ${name}${value === true && boolean_attributes.has(name) ? "" : `=${typeof value === "string" ? JSON.stringify(escape(value)) : `"${value}"`}`}`;
 }
-var current_component, escaped, missing_component, on_destroy;
-var init_index_071795bc = __esm({
-  ".svelte-kit/output/server/chunks/index-071795bc.js"() {
+var current_component, boolean_attributes, escaped, missing_component, on_destroy;
+var init_index_63796eb4 = __esm({
+  ".svelte-kit/output/server/chunks/index-63796eb4.js"() {
     Promise.resolve();
+    boolean_attributes = new Set([
+      "allowfullscreen",
+      "allowpaymentrequest",
+      "async",
+      "autofocus",
+      "autoplay",
+      "checked",
+      "controls",
+      "default",
+      "defer",
+      "disabled",
+      "formnovalidate",
+      "hidden",
+      "ismap",
+      "loop",
+      "multiple",
+      "muted",
+      "nomodule",
+      "novalidate",
+      "open",
+      "playsinline",
+      "readonly",
+      "required",
+      "reversed",
+      "selected"
+    ]);
     escaped = {
       '"': "&quot;",
       "'": "&#39;",
@@ -5511,14 +5540,30 @@ var layout_svelte_exports = {};
 __export(layout_svelte_exports, {
   default: () => _layout
 });
-var Nav, css2, _layout;
+var Nav, css$1, CopyEmailButton, css2, _layout;
 var init_layout_svelte = __esm({
   ".svelte-kit/output/server/entries/pages/__layout.svelte.js"() {
-    init_index_071795bc();
+    init_index_63796eb4();
     Nav = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       return `<nav class="${"max-w-sm mx-auto lg:max-w-none lg:mx-2 2xl:mx-24 sticky bottom-2 lg:bottom-1/3 lg:w-12"}"><div class="${"bg-background-light px-16 py-2 lg:px-2 lg:py-16 rounded-full shadow-lg"}"><ul class="${"flex lg:flex-col justify-center items-center gap-6"}"><li><a href="${"/#home"}"><svg class="${"h-8 stroke-current text-secondary-darker hover:text-secondary transition duration-200"}" viewBox="${"0 0 44 44"}" fill="${"none"}" xmlns="${"http://www.w3.org/2000/svg"}"><path d="${"M24.4039 2.79609L24.4038 2.79599C23.7662 2.15858 22.9015 1.80051 22 1.80051C21.0984 1.80051 20.2338 2.15858 19.5962 2.79599L19.5961 2.79609L2.79607 19.5961L2.78992 19.6022L2.78389 19.6085C2.16455 20.2497 1.82185 21.1086 1.8296 22C1.83734 22.8915 2.19492 23.7443 2.8253 24.3747C3.45569 25.0051 4.30846 25.3626 5.19992 25.3704C5.68633 25.3746 6.16304 25.2745 6.59998 25.082V38.8C6.59998 39.7017 6.95819 40.5665 7.59581 41.2042C8.23344 41.8418 9.09824 42.2 9.99998 42.2H14.8C15.7017 42.2 16.5665 41.8418 17.2041 41.2042C17.8418 40.5665 18.2 39.7017 18.2 38.8V34C18.2 33.6287 18.3475 33.2726 18.61 33.01C18.8726 32.7475 19.2287 32.6 19.6 32.6H24.4C24.7713 32.6 25.1274 32.7475 25.3899 33.01C25.6525 33.2726 25.8 33.6287 25.8 34V38.8C25.8 39.7017 26.1582 40.5665 26.7958 41.2042C27.4334 41.8418 28.2982 42.2 29.2 42.2H34C34.9017 42.2 35.7665 41.8418 36.4041 41.2042C37.0418 40.5665 37.4 39.7017 37.4 38.8V25.0821C37.8369 25.2745 38.3136 25.3746 38.8 25.3704C39.6915 25.3626 40.5443 25.0051 41.1746 24.3747C41.805 23.7443 42.1626 22.8915 42.1704 22C42.1781 21.1086 41.8354 20.2497 41.2161 19.6085L41.21 19.6022L41.2039 19.5961L24.4039 2.79609Z"}" stroke-width="${"2"}"></path></svg></a></li>
 			<li><a href="${"/#projects"}"><svg class="${"h-8 stroke-current text-secondary-darker hover:text-secondary transition duration-200"}" viewBox="${"0 0 48 48"}" fill="${"none"}" xmlns="${"http://www.w3.org/2000/svg"}"><path d="${"M22 10H12C10.9391 10 9.92172 10.4214 9.17157 11.1716C8.42143 11.9217 8 12.9391 8 14V36C8 37.0609 8.42143 38.0783 9.17157 38.8284C9.92172 39.5786 10.9391 40 12 40H34C35.0609 40 36.0783 39.5786 36.8284 38.8284C37.5786 38.0783 38 37.0609 38 36V26L22 10ZM35.172 7.172C35.541 6.78996 35.9824 6.48523 36.4704 6.27559C36.9584 6.06595 37.4833 5.95561 38.0144 5.95099C38.5455 5.94638 39.0722 6.04759 39.5638 6.24871C40.0554 6.44983 40.502 6.74685 40.8776 7.12242C41.2531 7.49799 41.5502 7.94459 41.7513 8.43618C41.9524 8.92777 42.0536 9.45448 42.049 9.9856C42.0444 10.5167 41.934 11.0416 41.7244 11.5296C41.5148 12.0176 41.21 12.459 40.828 12.828L23.656 30H18V24.344L35.172 7.172Z"}" stroke-width="${"2"}" stroke-linecap="${"round"}" stroke-linejoin="${"round"}"></path></svg></a></li>
 			<li><a href="${"/#about"}"><svg class="${"h-8 stroke-current text-secondary-darker hover:text-secondary transition duration-200"}" viewBox="${"0 0 32 39"}" fill="${"none"}" xmlns="${"http://www.w3.org/2000/svg"}"><circle cx="${"16"}" cy="${"10"}" r="${"9"}" stroke-width="${"2"}"></circle><path d="${"M1 32.4627C1 28.4228 3.46239 24.9594 6.96476 23.5015C7.65608 23.2137 8.54538 23.4091 9.51645 23.9791C11.4205 25.0965 13.6371 25.7368 16 25.7368C18.3629 25.7368 20.5795 25.0965 22.4835 23.9791C23.4546 23.4091 24.3439 23.2137 25.0352 23.5015C28.5376 24.9594 31 28.4228 31 32.4627V36.6228C31 37.3861 30.3838 38 29.6296 38H2.37037C1.61625 38 1 37.3861 1 36.6228V32.4627Z"}" stroke-width="${"2"}"></path></svg></a></li></ul></div></nav>`;
+    });
+    css$1 = {
+      code: '.contact.svelte-xq410f{--tw-border-opacity:1;--tw-text-opacity:1;align-items:center;border-color:rgb(62 80 87/var(--tw-border-opacity));border-width:2px;color:rgb(255 255 255/var(--tw-text-opacity));cursor:pointer;display:flex;font-weight:700;gap:1rem;overflow:hidden;padding-bottom:2rem;padding-top:2rem;position:relative}.contact.svelte-xq410f:before{--tw-translate-y:16rem;--tw-rotate:12deg;--tw-skew-y:12deg;--tw-bg-opacity:1;background-color:rgb(255 115 122/var(--tw-bg-opacity));content:"";height:100%;left:0;position:absolute;top:0;transition-duration:.5s;transition-property:color,background-color,border-color,fill,stroke,opacity,box-shadow,transform,filter,-webkit-text-decoration-color,-webkit-backdrop-filter;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter,-webkit-text-decoration-color,-webkit-backdrop-filter;transition-timing-function:cubic-bezier(.4,0,.2,1);width:100%;z-index:-10}.contact.svelte-xq410f:before,.contact.svelte-xq410f:hover:before{transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.contact.svelte-xq410f:hover:before{--tw-translate-y:0px;--tw-rotate:0deg;--tw-skew-y:0deg}',
+      map: null
+    };
+    CopyEmailButton = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+      let emailCopyText = "copy";
+      let { email = "" } = $$props;
+      if ($$props.email === void 0 && $$bindings.email && email !== void 0)
+        $$bindings.email(email);
+      $$result.css.add(css$1);
+      return `<div class="${escape(null_to_empty($$props.class + " contact group w-[80%] max-w-lg")) + " svelte-xq410f"}"><svg xmlns="${"http://www.w3.org/2000/svg"}" class="${"h-4 w-4 sm:h-6 sm:w-6 ml-4"}" fill="${"none"}" viewBox="${"0 0 24 24"}" stroke="${"currentColor"}"><path stroke-linecap="${"round"}" stroke-linejoin="${"round"}" stroke-width="${"2"}" d="${"M20 13V6a2 2 0 00-2-2H6a2 2 0 00-2 2v7m16 0v5a2 2 0 01-2 2H6a2 2 0 01-2-2v-5m16 0h-2.586a1 1 0 00-.707.293l-2.414 2.414a1 1 0 01-.707.293h-3.172a1 1 0 01-.707-.293l-2.414-2.414A1 1 0 006.586 13H4"}"></path></svg>
+	<div class="${"group-hover:opacity-80 transition text-sm sm:text-base"}">${escape(email)}</div>
+	<div class="${"group-hover:flex absolute bottom-2 right-2 sm:bottom-[35%] sm:right-1 gap-2 pr-2 hidden duration-500 transition text-xs sm:text-base"}">${escape(emailCopyText)}
+		<svg xmlns="${"http://www.w3.org/2000/svg"}" class="${"h-4 w-4 sm:h-6 sm:w-6"}" fill="${"none"}" viewBox="${"0 0 24 24"}" stroke="${"currentColor"}"><path stroke-linecap="${"round"}" stroke-linejoin="${"round"}" stroke-width="${"2"}" d="${"M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"}"></path></svg></div>
+</div>`;
     });
     css2 = {
       code: ".spacer.svelte-app492{aspect-ratio:960/540;background-position:50%;background-repeat:no-repeat;background-size:cover;position:absolute;width:100%}.layer1.svelte-app492{background-image:url(/top-waves.svg)}.layer2.svelte-app492{background-image:url(/bottom-waves.svg)}",
@@ -5536,7 +5581,10 @@ ${validate_component(Nav, "Nav").$$render($$result, {}, {}, {})}
 
 <footer class="${"pt-12"}"><div class="${"flex flex-col justify-center items-center gap-4"}"><div class="${"spacer layer2 -z-10 svelte-app492"}"></div>
 
-		<a target="${"_blank"}" class="${"font-bold text-white text-lg hover:text-secondary transition"}" href="${"mailto: braedenleefoster@gmail.com"}">braedenleefoster@gmail.com</a>
+		${validate_component(CopyEmailButton, "CopyEmailButton").$$render($$result, {
+        class: "my-12",
+        email: "braedenleefoster@gmail.com"
+      }, {}, {})}
 		<div class="${"flex gap-4"}"><a target="${"_blank"}" rel="${"noopener noreferrer"}" href="${"https://www.linkedin.com/in/braeden-foster-30b120116/"}"><svg class="${"w-12 h-12 fill-current text-background-secondary hover:text-background-secondary-active transition"}" viewBox="${"0 0 56 56"}" fill="${"none"}" xmlns="${"http://www.w3.org/2000/svg"}"><circle cx="${"28"}" cy="${"28"}" r="${"28"}"></circle><path fill-rule="${"evenodd"}" clip-rule="${"evenodd"}" d="${"M37.9167 11H18.0833C14.1719 11 11 14.1719 11 18.0833V37.9167C11 41.8281 14.1719 45 18.0833 45H37.9167C41.8295 45 45 41.8281 45 37.9167V18.0833C45 14.1719 41.8295 11 37.9167 11ZM22.3333 37.9167H18.0833V22.3333H22.3333V37.9167ZM20.2083 20.537C18.8398 20.537 17.7292 19.4178 17.7292 18.038C17.7292 16.6582 18.8398 15.539 20.2083 15.539C21.5768 15.539 22.6875 16.6582 22.6875 18.038C22.6875 19.4178 21.5782 20.537 20.2083 20.537ZM39.3333 37.9167H35.0833V29.9777C35.0833 25.2063 29.4167 25.5676 29.4167 29.9777V37.9167H25.1667V22.3333H29.4167V24.8338C31.3943 21.1703 39.3333 20.8997 39.3333 28.3414V37.9167Z"}" fill="${"#3E4253"}"></path></svg></a>
 			<a target="${"_blank"}" rel="${"noopener noreferrer"}" href="${"https://github.com/braedenf"}"><svg class="${"w-12 h-12 fill-current text-background-secondary hover:text-background-secondary-active transition"}" viewBox="${"0 0 56 56"}" xmlns="${"http://www.w3.org/2000/svg"}"><circle cx="${"28"}" cy="${"28"}" r="${"28"}"></circle><ellipse cx="${"21.1321"}" cy="${"33.283"}" rx="${"3.69811"}" ry="${"5.81132"}" fill="${"#3E4253"}"></ellipse><ellipse cx="${"35.9246"}" cy="${"33.283"}" rx="${"3.69811"}" ry="${"5.81132"}" fill="${"#3E4253"}"></ellipse><path fill-rule="${"evenodd"}" clip-rule="${"evenodd"}" d="${"M12.1997 11.6201C11.5098 12.8281 10.352 15.6819 11.4579 21.3501C9.57083 23.8654 8.45282 26.9908 8.45282 30.3772C8.45282 38.6928 15.1939 45.4338 23.5094 45.4338H32.4906C40.8061 45.4338 47.5472 38.6928 47.5472 30.3772C47.5472 26.9908 46.4292 23.8654 44.5421 21.3502C45.648 15.6819 44.4902 12.8281 43.8003 11.6201C43.5836 11.2406 43.1215 11.069 42.6998 11.1835C41.1172 11.613 39.2865 12.3397 37.1488 15.3069C35.3582 14.6829 32.0496 14.2641 28.2642 14.2641C24.1641 14.2641 20.6234 14.7554 18.9651 15.4667C16.7784 12.3655 14.9108 11.6206 13.3002 11.1835C12.8785 11.069 12.4164 11.2406 12.1997 11.6201ZM23.6164 26.0357C18.5287 25.7423 12 26.6766 12 31.7727V34.3636C12 39.1333 16.3415 42.9999 21.697 42.9999H34.303C39.6585 42.9999 44 39.1333 44 34.3636V31.7727C44 26.6766 37.4713 25.7423 32.3836 26.0357C30.9878 26.1162 29.5179 26.1592 28 26.1592C26.4821 26.1592 25.0122 26.1162 23.6164 26.0357Z"}" fill="${"#3E4253"}"></path></svg></a></div></div>
 </footer>`;
@@ -5556,9 +5604,9 @@ var entry, js, css3;
 var init__ = __esm({
   ".svelte-kit/output/server/nodes/0.js"() {
     init_layout_svelte();
-    entry = "pages/__layout.svelte-7f009885.js";
-    js = ["pages/__layout.svelte-7f009885.js", "chunks/vendor-6b98a0cd.js"];
-    css3 = ["assets/pages/__layout.svelte-7291ecd1.css"];
+    entry = "pages/__layout.svelte-729dd3fa.js";
+    js = ["pages/__layout.svelte-729dd3fa.js", "chunks/vendor-9c584af2.js"];
+    css3 = ["assets/pages/__layout.svelte-feb947b6.css"];
   }
 });
 
@@ -5574,7 +5622,7 @@ function load({ error: error2, status }) {
 var Error2;
 var init_error_svelte = __esm({
   ".svelte-kit/output/server/entries/pages/error.svelte.js"() {
-    init_index_071795bc();
+    init_index_63796eb4();
     Error2 = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       let { status } = $$props;
       let { error: error2 } = $$props;
@@ -5606,15 +5654,15 @@ var entry2, js2, css4;
 var init__2 = __esm({
   ".svelte-kit/output/server/nodes/1.js"() {
     init_error_svelte();
-    entry2 = "error.svelte-1e5117c1.js";
-    js2 = ["error.svelte-1e5117c1.js", "chunks/vendor-6b98a0cd.js"];
+    entry2 = "error.svelte-4db74749.js";
+    js2 = ["error.svelte-4db74749.js", "chunks/vendor-9c584af2.js"];
     css4 = [];
   }
 });
 
-// node_modules/.pnpm/kute.js@2.2.2/node_modules/kute.js/dist/kute.min.js
+// node_modules/kute.js/dist/kute.min.js
 var require_kute_min = __commonJS({
-  "node_modules/.pnpm/kute.js@2.2.2/node_modules/kute.js/dist/kute.min.js"(exports, module2) {
+  "node_modules/kute.js/dist/kute.min.js"(exports, module2) {
     !function(t2, e2) {
       typeof exports == "object" && typeof module2 != "undefined" ? module2.exports = e2() : typeof define == "function" && define.amd ? define(e2) : (t2 = typeof globalThis != "undefined" ? globalThis : t2 || self).KUTE = e2();
     }(exports, function() {
@@ -6783,7 +6831,7 @@ __export(index_svelte_exports, {
 var import_kute, SectionLabel, css5, Routes;
 var init_index_svelte = __esm({
   ".svelte-kit/output/server/entries/pages/index.svelte.js"() {
-    init_index_071795bc();
+    init_index_63796eb4();
     import_kute = __toModule(require_kute_min());
     SectionLabel = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       let { text = "" } = $$props;
@@ -6798,14 +6846,14 @@ var init_index_svelte = __esm({
     };
     Routes = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       $$result.css.add(css5);
-      return `<main class="${"mt-20 sm:mt-40 lg:mt-48 xl:mt-72 2xl:mt-[500px] mb-20 flex flex-col lg:mx-auto"}"><section class="${"container px-8 mx-auto lg:mx-auto lg:max-w-4xl pb-64 sm:pb-[400px] xl:pb-[500px]"}" id="${"hero"}"><svg class="${"opacity-20 blob-motion -z-30 w-[40%] sm:w-[50%] svelte-nwigxm"}" id="${"visual"}" viewBox="${"0 0 900 900"}" width="${"900"}" height="${"900"}" xmlns="${"http://www.w3.org/2000/svg"}" xmlns:xlink="${"http://www.w3.org/1999/xlink"}" version="${"1.1"}"><g transform="${"translate(452.16122828917685 383.88346016249517)"}"><path id="${"blob1"}" d="${"M249.6 -220.4C316.2 -182.9 358.1 -91.5 358.5 0.4C358.8 92.2 317.7 184.3 251 259.3C184.3 334.3 92.2 392.2 12.1 380C-67.9 367.9 -135.8 285.8 -205.6 210.8C-275.4 135.8 -347.2 67.9 -360.5 -13.3C-373.8 -94.5 -328.7 -189 -258.9 -226.5C-189 -264 -94.5 -244.5 -1.5 -243C91.5 -241.5 182.9 -257.9 249.6 -220.4"}" fill="${"#F2545B"}"></path></g><g transform="${"translate(485.8818936096409 484.65017177881225)"}" style="${"visibility: hidden;"}"><path id="${"blob2"}" d="${"M152.1 -166.6C198.1 -106.1 237 -53 260.6 23.6C284.2 100.2 292.3 200.3 246.3 240.7C200.3 281 100.2 261.5 12.5 249C-75.2 236.5 -150.4 231 -214.4 190.7C-278.4 150.4 -331.2 75.2 -346.6 -15.4C-362.1 -106.1 -340.1 -212.1 -276.1 -272.6C-212.1 -333.1 -106.1 -348.1 -26.5 -321.6C53 -295 106.1 -227.1 152.1 -166.6"}" fill="${"#F2545B"}"></path></g></svg>
-		<div class="${"grid grid-cols-1 gap-8 lg:gap-3 sm:grid-cols-3 justify-items-center"}"><div class="${"col-span-2"}"><h2 class="${"font-display text-white font-bold text-4xl sm:text-5xl lg:text-6xl xl:text-8xl mb-8"}">Welcome to my <span class="${"text-secondary"}">portfolio</span></h2>
+      return `<main class="${"mt-20 sm:mt-40 lg:mt-48 xl:mt-72 2xl:mt-[500px] mb-20 flex flex-col lg:mx-auto"}"><section class="${"container px-8 mx-auto lg:mx-auto lg:max-w-4xl pb-64 sm:pb-[400px] xl:pb-[500px]"}" id="${"hero"}"><svg class="${"opacity-20 blob-motion -z-30 w-[70%] sm:w-[50%] svelte-nwigxm"}" id="${"visual"}" viewBox="${"0 0 900 900"}" width="${"900"}" height="${"900"}" xmlns="${"http://www.w3.org/2000/svg"}" xmlns:xlink="${"http://www.w3.org/1999/xlink"}" version="${"1.1"}"><g transform="${"translate(452.16122828917685 383.88346016249517)"}"><path id="${"blob1"}" d="${"M249.6 -220.4C316.2 -182.9 358.1 -91.5 358.5 0.4C358.8 92.2 317.7 184.3 251 259.3C184.3 334.3 92.2 392.2 12.1 380C-67.9 367.9 -135.8 285.8 -205.6 210.8C-275.4 135.8 -347.2 67.9 -360.5 -13.3C-373.8 -94.5 -328.7 -189 -258.9 -226.5C-189 -264 -94.5 -244.5 -1.5 -243C91.5 -241.5 182.9 -257.9 249.6 -220.4"}" fill="${"#F2545B"}"></path></g><g transform="${"translate(485.8818936096409 484.65017177881225)"}" style="${"visibility: hidden;"}"><path id="${"blob2"}" d="${"M152.1 -166.6C198.1 -106.1 237 -53 260.6 23.6C284.2 100.2 292.3 200.3 246.3 240.7C200.3 281 100.2 261.5 12.5 249C-75.2 236.5 -150.4 231 -214.4 190.7C-278.4 150.4 -331.2 75.2 -346.6 -15.4C-362.1 -106.1 -340.1 -212.1 -276.1 -272.6C-212.1 -333.1 -106.1 -348.1 -26.5 -321.6C53 -295 106.1 -227.1 152.1 -166.6"}" fill="${"#F2545B"}"></path></g></svg>
+		<div class="${"grid grid-cols-1 gap-8 lg:gap-3 sm:grid-cols-3 justify-items-center"}"><div class="${"col-span-2"}"><h2 class="${"font-display text-white font-bold text-4xl sm:text-5xl lg:text-6xl xl:text-8xl mb-8"}">Welcome to my <span class="${"text-transparent bg-clip-text bg-gradient-to-br from-secondary-darker to-secondary"}">portfolio</span></h2>
 				<p class="${"font-body text-white text-lg border-t-2 pt-2 border-l-0 border-r-0 border-b-0 border-primary border-2"}">I\u2019m a frontend developer and creative technologist based in T\u0101maki Makaurau, Aotearoa -
 					Auckland New Zealand. I design and experiment with web technologies to create rich user
 					experiences.
 				</p></div>
 
-			<img class="${"object-left rounded-full shadow-lg h-52 sm:h-56 lg:h-64 xl:h-72\u2308"}" src="${"portfolio_picture.png"}" alt="${"profile of me"}"></div></section>
+			<img class="${"object-left rounded-full shadow-lg aspect-auto w-[60%] sm:w-full"}" src="${"portfolio_picture.png"}" alt="${"profile of me"}"></div></section>
 	<section class="${"mt-16 pt-16 bg-gradient-to-r from-secondary-darker to-secondary"}" id="${"projects"}">${validate_component(SectionLabel, "SectionLabel").$$render($$result, {
         class: "-rotate-2 bg-background-dark max-w-sm mx-auto",
         text: "Web Work"
@@ -6860,17 +6908,17 @@ var entry3, js3, css6;
 var init__3 = __esm({
   ".svelte-kit/output/server/nodes/2.js"() {
     init_index_svelte();
-    entry3 = "pages/index.svelte-027f7374.js";
-    js3 = ["pages/index.svelte-027f7374.js", "chunks/vendor-6b98a0cd.js"];
+    entry3 = "pages/index.svelte-ca5cff43.js";
+    js3 = ["pages/index.svelte-ca5cff43.js", "chunks/vendor-9c584af2.js"];
     css6 = ["assets/pages/index.svelte-c581975f.css"];
   }
 });
 
-// .svelte-kit/output/server/chunks/ProjectPage-97fd2840.js
+// .svelte-kit/output/server/chunks/ProjectPage-7aa77037.js
 var ProjectPage;
-var init_ProjectPage_97fd2840 = __esm({
-  ".svelte-kit/output/server/chunks/ProjectPage-97fd2840.js"() {
-    init_index_071795bc();
+var init_ProjectPage_7aa77037 = __esm({
+  ".svelte-kit/output/server/chunks/ProjectPage-7aa77037.js"() {
+    init_index_63796eb4();
     ProjectPage = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       let { projectLink = "/" } = $$props;
       let { linkText = "Visit Website" } = $$props;
@@ -6884,7 +6932,7 @@ var init_ProjectPage_97fd2840 = __esm({
       return `<section class="${"text-white font-body"}"><div class="${"container px-5 py-24 mx-auto flex flex-col"}"><div class="${"lg:w-5/6 mx-auto"}"><div class="${"rounded-lg h-auto overflow-hidden"}"><img alt="${"screenshot of maletino movement website"}" class="${"mx-auto shadow-xl sm:w-[80%]"}"${add_attribute("src", headerImageUrl, 0)}></div>
 
 			<div class="${"flex flex-col sm:flex-row mt-10"}"><div class="${"sm:w-20 sm:py-8 sm:border-l border-gray-200 sm:border-t-0 border-t mt-4 pt-4 sm:mt-0 pr-6 text-left"}"></div>
-				<div><div><a class="${"inline-flex items-center text-lg group"}" href="${"/#projects"}"><svg fill="${"none"}" stroke="${"currentColor"}" stroke-linecap="${"round"}" stroke-linejoin="${"round"}" stroke-width="${"2"}" class="${"w-7 h-7 rotate-180 group-hover:-translate-x-2 transition"}" viewBox="${"0 0 24 24"}"><path d="${"M5 12h14M12 5l7 7-7 7"}"></path></svg> Back</a></div>
+				<div><div><a class="${"inline-flex items-center text-lg group my-6"}" href="${"/#projects"}"><svg fill="${"none"}" stroke="${"currentColor"}" stroke-linecap="${"round"}" stroke-linejoin="${"round"}" stroke-width="${"2"}" class="${"w-7 h-7 rotate-180 group-hover:-translate-x-2 transition"}" viewBox="${"0 0 24 24"}"><path d="${"M5 12h14M12 5l7 7-7 7"}"></path></svg> Back</a></div>
 					${slots.default ? slots.default({}) : ``}
 					<a class="${"group text-secondary inline-flex items-center pt-12"}"${add_attribute("href", projectLink, 0)} target="${"_blank"}" rel="${"noopener noreferrer"}">${escape(linkText)}
 						<svg fill="${"none"}" stroke="${"currentColor"}" stroke-linecap="${"round"}" stroke-linejoin="${"round"}" stroke-width="${"2"}" class="${"w-4 h-4 ml-1 group-hover:translate-x-2 transition duration-300"}" viewBox="${"0 0 24 24"}"><path d="${"M5 12h14M12 5l7 7-7 7"}"></path></svg></a></div></div></div></div></section>`;
@@ -6900,8 +6948,8 @@ __export(ecommerce_model_viewer_svelte_exports, {
 var Ecommerce_model_viewer;
 var init_ecommerce_model_viewer_svelte = __esm({
   ".svelte-kit/output/server/entries/pages/projects/ecommerce-model-viewer.svelte.js"() {
-    init_index_071795bc();
-    init_ProjectPage_97fd2840();
+    init_index_63796eb4();
+    init_ProjectPage_7aa77037();
     Ecommerce_model_viewer = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       return `${validate_component(ProjectPage, "ProjectPage").$$render($$result, {
         headerImageUrl: "/Model-Viewer/ModelViewerPrototype.png",
@@ -6913,7 +6961,7 @@ var init_ecommerce_model_viewer_svelte = __esm({
 	<p class="${"leading-relaxed text-lg mb-4 lg:mb-8"}">In 2021 I developed a proof of concept prototype for <a class="${"text-background-secondary hover:text-background-secondary-active"}" href="${"https://resident.co.nz/"}">Resident</a> - A furniture and lighting company. I worked with Resident to improve the way customers can interact
 		with their products online, using a 3D and AR viewer for products featured online.
 	</p>
-	<h2 class="${"text-primary font-bold text-2xl lg:text-3xl pb-4"}">Building the Prototype</h2>
+	<h2 class="${"text-primary font-bold text-2xl lg:text-3xl py-6"}">Building the Prototype</h2>
 
 	<p class="${"leading-relaxed text-lg mb-4 lg:mb-8"}">To create the 3D Viewer for the prototype I explored many options, such as <a target="${"_blank"}" rel="${"noopener noreferrer"}" class="${"text-background-secondary hover:text-background-secondary-active"}" href="${"https://vectary.com"}">Vectary</a>
 		and
@@ -6921,7 +6969,7 @@ var init_ecommerce_model_viewer_svelte = __esm({
 		<a target="${"_blank"}" rel="${"noopener noreferrer"}" class="${"text-background-secondary hover:text-background-secondary-active"}" href="${"https://modelviewer.dev/"}">Model Viewer</a> library, as it is open source and free to use. Additionally, the library includes features such
 		as a Web viewer, AR Viewer, Custom Camera settings, light environment settings and so on.
 	</p>
-	<h2 class="${"text-primary font-bold text-2xl lg:text-3xl pb-4"}">Hosting the 3D Files</h2>
+	<h2 class="${"text-primary font-bold text-2xl lg:text-3xl py-6"}">Hosting the 3D Files</h2>
 	<p class="${"leading-relaxed text-lg mb-4 lg:mb-8"}">To host the many 3D model variants for the furniture and lighting products, I used a cloud
 		hosting software called <a target="${"_blank"}" rel="${"noopener noreferrer"}" class="${"text-background-secondary hover:text-background-secondary-active"}" href="${"https://cloudinary.com/"}">Cloudinary</a>. The advantage of using Cloudinary is that the platform can serve the 3D models via a simple
 		API, and the models can be fetched as images or 3D Model formats. Additionally, the client&#39;s can
@@ -6944,8 +6992,8 @@ var entry4, js4, css7;
 var init__4 = __esm({
   ".svelte-kit/output/server/nodes/3.js"() {
     init_ecommerce_model_viewer_svelte();
-    entry4 = "pages/projects/ecommerce-model-viewer.svelte-3a86af45.js";
-    js4 = ["pages/projects/ecommerce-model-viewer.svelte-3a86af45.js", "chunks/vendor-6b98a0cd.js", "chunks/ProjectPage-7d60389c.js"];
+    entry4 = "pages/projects/ecommerce-model-viewer.svelte-8f150ee4.js";
+    js4 = ["pages/projects/ecommerce-model-viewer.svelte-8f150ee4.js", "chunks/vendor-9c584af2.js", "chunks/ProjectPage-f20042de.js"];
     css7 = [];
   }
 });
@@ -6958,8 +7006,8 @@ __export(maletino_movement_svelte_exports, {
 var Maletino_movement;
 var init_maletino_movement_svelte = __esm({
   ".svelte-kit/output/server/entries/pages/projects/maletino-movement.svelte.js"() {
-    init_index_071795bc();
-    init_ProjectPage_97fd2840();
+    init_index_63796eb4();
+    init_ProjectPage_7aa77037();
     Maletino_movement = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       return `${validate_component(ProjectPage, "ProjectPage").$$render($$result, {
         headerImageUrl: "/MMBannerDesktop-01.png",
@@ -6970,7 +7018,7 @@ var init_maletino_movement_svelte = __esm({
 	<p class="${"leading-relaxed text-lg mb-4 lg:mb-8"}">Towards the end of 2021, I collaborated with fitness startup Maletino Movement to create a
 		personalised website and booking system.
 	</p>
-	<h2 class="${"text-primary font-bold text-2xl lg:text-3xl pb-4"}">The Website</h2>
+	<h2 class="${"text-primary font-bold text-2xl lg:text-3xl py-4 sm:py-8"}">The Website</h2>
 	<p class="${"leading-relaxed text-lg mb-4 lg:mb-8"}">I designed the website in collaboration with the company founder Yolanda Maletino. We went
 		through the process of creating the brand and vision for the company, then I brought the ideas
 		and the key messaging to the website.
@@ -6979,7 +7027,7 @@ var init_maletino_movement_svelte = __esm({
 		<div><p class="${"leading-relaxed text-lg mb-4 lg:mb-8"}">To establish the necessary branding components such as the logo, colours and key messages,
 				we used the project planning tool called <a target="${"_blank"}" rel="${"noopener noreferrer"}" class="${"text-background-secondary hover:text-background-secondary-active"}" href="${"https://www.milanote.com"}">Milanote</a> to rapidly develop ideas and mockup website layouts.
 			</p></div></div>
-	<h2 class="${"text-primary font-bold text-2xl lg:text-3xl py-8"}">The Tech Stack</h2>
+	<h2 class="${"text-primary font-bold text-2xl lg:text-3xl py-4 sm:py-8 mt-6"}">The Tech Stack</h2>
 
 	<p class="${"leading-relaxed text-lg mb-4 lg:mb-8"}">With the front-end web framework Sveltekit I developed each feature on the website iteratively
 		using CI. I deployed the site using the version control system called Git. I then used Vercel to
@@ -7009,8 +7057,8 @@ var entry5, js5, css8;
 var init__5 = __esm({
   ".svelte-kit/output/server/nodes/4.js"() {
     init_maletino_movement_svelte();
-    entry5 = "pages/projects/maletino-movement.svelte-348467b2.js";
-    js5 = ["pages/projects/maletino-movement.svelte-348467b2.js", "chunks/vendor-6b98a0cd.js", "chunks/ProjectPage-7d60389c.js"];
+    entry5 = "pages/projects/maletino-movement.svelte-5dd15b05.js";
+    js5 = ["pages/projects/maletino-movement.svelte-5dd15b05.js", "chunks/vendor-9c584af2.js", "chunks/ProjectPage-f20042de.js"];
     css8 = [];
   }
 });
@@ -7023,8 +7071,8 @@ __export(museum_web_game_svelte_exports, {
 var Museum_web_game;
 var init_museum_web_game_svelte = __esm({
   ".svelte-kit/output/server/entries/pages/projects/museum-web-game.svelte.js"() {
-    init_index_071795bc();
-    init_ProjectPage_97fd2840();
+    init_index_63796eb4();
+    init_ProjectPage_7aa77037();
     Museum_web_game = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       return `${validate_component(ProjectPage, "ProjectPage").$$render($$result, {
         headerImageUrl: "/MotatGame/TreasureMapClip.gif",
@@ -7038,13 +7086,13 @@ var init_museum_web_game_svelte = __esm({
 	</p>
 	<p class="${"leading-relaxed text-lg mb-4 lg:mb-8"}">The outcome was a close collaboration between myself and MOTAT&#39;s graphic designer.
 	</p>
-	<h2 class="${"text-primary font-bold text-2xl lg:text-3xl pb-4"}">Adapting through COVID-19</h2>
+	<h2 class="${"text-primary font-bold text-2xl lg:text-3xl py-6"}">Adapting through COVID-19</h2>
 
 	<p class="${"leading-relaxed text-lg mb-4 lg:mb-8"}">The purpose of this game was to create more accessibility for families and children, who were
 		unable to visit the museum physically due to COVID-19 restrictions. I aimed to include iconic
 		landmarks found at the museum to serve as the background for the platformer game.
 	</p>
-	<h2 class="${"text-primary font-bold text-2xl lg:text-3xl pb-4"}">Developing the Game</h2>
+	<h2 class="${"text-primary font-bold text-2xl lg:text-3xl py-6"}">Developing the Game</h2>
 	<p class="${"leading-relaxed text-lg mb-4 lg:mb-8"}">The game was built using the open-source game engine called <a target="${"_blank"}" rel="${"noopener noreferrer"}" class="${"text-background-secondary hover:text-background-secondary-active"}" href="${"https://godotengine.org/"}">Godot</a>. The value of using this engine in addition to being open-source was due to its simplicity in
 		designing and scripting 2D games. I was able to quickly build levels using Godot&#39;s 2D tile
 		system to create a variety of obstacles and platforms for players to navigate.
@@ -7066,8 +7114,8 @@ var entry6, js6, css9;
 var init__6 = __esm({
   ".svelte-kit/output/server/nodes/5.js"() {
     init_museum_web_game_svelte();
-    entry6 = "pages/projects/museum-web-game.svelte-6d42c055.js";
-    js6 = ["pages/projects/museum-web-game.svelte-6d42c055.js", "chunks/vendor-6b98a0cd.js", "chunks/ProjectPage-7d60389c.js"];
+    entry6 = "pages/projects/museum-web-game.svelte-48ae7fff.js";
+    js6 = ["pages/projects/museum-web-game.svelte-48ae7fff.js", "chunks/vendor-9c584af2.js", "chunks/ProjectPage-f20042de.js"];
     css9 = [];
   }
 });
@@ -7078,7 +7126,7 @@ __export(exports, {
 });
 init_install_fetch();
 
-// node_modules/.pnpm/@sveltejs+kit@1.0.0-next.223_svelte@3.44.1/node_modules/@sveltejs/kit/dist/node.js
+// node_modules/@sveltejs/kit/dist/node.js
 function getRawBody(req) {
   return new Promise((fulfil, reject) => {
     const h2 = req.headers;
@@ -7119,7 +7167,7 @@ function getRawBody(req) {
 }
 
 // .svelte-kit/output/server/app.js
-init_index_071795bc();
+init_index_63796eb4();
 var __accessCheck2 = (obj, member, msg) => {
   if (!member.has(obj))
     throw TypeError("Cannot " + msg);
@@ -7196,11 +7244,11 @@ async function render_endpoint(request, route, match) {
   request.params = route.params ? decode_params(route.params(match)) : {};
   const response = await handler(request);
   const preface = `Invalid response from route ${request.url.pathname}`;
+  if (!response) {
+    return;
+  }
   if (typeof response !== "object") {
     return error(`${preface}: expected an object, got ${typeof response}`);
-  }
-  if (response.fallthrough) {
-    return;
   }
   let { status = 200, body, headers = {} } = response;
   headers = lowercase_keys(headers);
@@ -7557,9 +7605,7 @@ async function render_response({
   status,
   error: error2,
   url,
-  params,
-  ssr,
-  stuff
+  params
 }) {
   const css22 = new Set(options.manifest._.entry.css);
   const js7 = new Set(options.manifest._.entry.js);
@@ -7571,7 +7617,7 @@ async function render_response({
   if (error2) {
     error2.stack = options.get_stack(error2);
   }
-  if (ssr) {
+  if (page_config.ssr) {
     branch.forEach(({ node, loaded, fetched, uses_credentials }) => {
       if (node.css)
         node.css.forEach((url2) => css22.add(url2));
@@ -7592,7 +7638,7 @@ async function render_response({
         navigating: writable(null),
         session
       },
-      page: { url, params, status, error: error2, stuff },
+      page: { url, params, status, error: error2 },
       components: branch.map(({ node }) => node.module.default)
     };
     const print_error = (property, replacement) => {
@@ -7646,9 +7692,9 @@ async function render_response({
       throw new Error(`Failed to serialize session data: ${error3.message}`);
     })},
 				route: ${!!page_config.router},
-				spa: ${!ssr},
+				spa: ${!page_config.ssr},
 				trailing_slash: ${s2(options.trailing_slash)},
-				hydrate: ${ssr && page_config.hydrate ? `{
+				hydrate: ${page_config.ssr && page_config.hydrate ? `{
 					status: ${status},
 					error: ${serialize_error(error2)},
 					nodes: [
@@ -7810,6 +7856,7 @@ async function load_node({
   $session,
   stuff,
   prerender_enabled,
+  is_leaf,
   is_error,
   status,
   error: error2
@@ -7972,14 +8019,13 @@ async function load_node({
       load_input.error = error2;
     }
     loaded = await module2.load.call(null, load_input);
-    if (!loaded) {
-      throw new Error(`load function must return a value${options.dev ? ` (${node.entry})` : ""}`);
-    }
   } else {
     loaded = {};
   }
-  if (loaded.fallthrough && !is_error) {
+  if (!loaded && is_leaf && !is_error)
     return;
+  if (!loaded) {
+    throw new Error(`${node.entry} - load must return a value except for page fall through`);
   }
   return {
     node,
@@ -7990,33 +8036,27 @@ async function load_node({
     uses_credentials
   };
 }
-async function respond_with_error({
-  request,
-  options,
-  state,
-  $session,
-  status,
-  error: error2,
-  ssr
-}) {
-  try {
-    const default_layout = await options.manifest._.nodes[0]();
-    const default_error = await options.manifest._.nodes[1]();
-    const params = {};
-    const layout_loaded = await load_node({
-      request,
-      options,
-      state,
-      route: null,
-      url: request.url,
-      params,
-      node: default_layout,
-      $session,
-      stuff: {},
-      prerender_enabled: is_prerender_enabled(options, default_error, state),
-      is_error: false
-    });
-    const error_loaded = await load_node({
+async function respond_with_error({ request, options, state, $session, status, error: error2 }) {
+  const default_layout = await options.manifest._.nodes[0]();
+  const default_error = await options.manifest._.nodes[1]();
+  const params = {};
+  const loaded = await load_node({
+    request,
+    options,
+    state,
+    route: null,
+    url: request.url,
+    params,
+    node: default_layout,
+    $session,
+    stuff: {},
+    prerender_enabled: is_prerender_enabled(options, default_error, state),
+    is_leaf: false,
+    is_error: false
+  });
+  const branch = [
+    loaded,
+    await load_node({
       request,
       options,
       state,
@@ -8025,26 +8065,28 @@ async function respond_with_error({
       params,
       node: default_error,
       $session,
-      stuff: layout_loaded ? layout_loaded.stuff : {},
+      stuff: loaded ? loaded.stuff : {},
       prerender_enabled: is_prerender_enabled(options, default_error, state),
+      is_leaf: false,
       is_error: true,
       status,
       error: error2
-    });
+    })
+  ];
+  try {
     return await render_response({
       options,
       $session,
       page_config: {
         hydrate: options.hydrate,
-        router: options.router
+        router: options.router,
+        ssr: options.ssr
       },
-      stuff: error_loaded.stuff,
       status,
       error: error2,
-      branch: [layout_loaded, error_loaded],
+      branch,
       url: request.url,
-      params,
-      ssr
+      params
     });
   } catch (err) {
     const error3 = coalesce_to_error(err);
@@ -8060,20 +8102,8 @@ function is_prerender_enabled(options, node, state) {
   return options.prerender && (!!node.module.prerender || !!state.prerender && state.prerender.all);
 }
 async function respond$1(opts) {
-  const { request, options, state, $session, route, ssr } = opts;
+  const { request, options, state, $session, route } = opts;
   let nodes;
-  if (!ssr) {
-    return await render_response(__spreadProps(__spreadValues({}, opts), {
-      branch: [],
-      page_config: {
-        hydrate: true,
-        router: true
-      },
-      status: 200,
-      url: request.url,
-      stuff: {}
-    }));
-  }
   try {
     nodes = await Promise.all(route.a.map((n) => options.manifest._.nodes[n] && options.manifest._.nodes[n]()));
   } catch (err) {
@@ -8085,8 +8115,7 @@ async function respond$1(opts) {
       state,
       $session,
       status: 500,
-      error: error3,
-      ssr
+      error: error3
     });
   }
   const leaf = nodes[nodes.length - 1].module;
@@ -8101,9 +8130,9 @@ async function respond$1(opts) {
   let status = 200;
   let error2;
   let set_cookie_headers = [];
-  let stuff = {};
   ssr:
-    if (ssr) {
+    if (page_config.ssr) {
+      let stuff = {};
       for (let i2 = 0; i2 < nodes.length; i2 += 1) {
         const node = nodes[i2];
         let loaded;
@@ -8114,6 +8143,7 @@ async function respond$1(opts) {
               node,
               stuff,
               prerender_enabled: is_prerender_enabled(options, node, state),
+              is_leaf: i2 === nodes.length - 1,
               is_error: false
             }));
             if (!loaded)
@@ -8154,6 +8184,7 @@ async function respond$1(opts) {
                     node: error_node,
                     stuff: node_loaded.stuff,
                     prerender_enabled: is_prerender_enabled(options, error_node, state),
+                    is_leaf: false,
                     is_error: true,
                     status,
                     error: error2
@@ -8163,7 +8194,6 @@ async function respond$1(opts) {
                   }
                   page_config = get_page_config(error_node.module, options);
                   branch = branch.slice(0, j + 1).concat(error_loaded);
-                  stuff = __spreadValues(__spreadValues({}, node_loaded.stuff), error_loaded.stuff);
                   break ssr;
                 } catch (err) {
                   const e2 = coalesce_to_error(err);
@@ -8178,8 +8208,7 @@ async function respond$1(opts) {
               state,
               $session,
               status,
-              error: error2,
-              ssr
+              error: error2
             }), set_cookie_headers);
           }
         }
@@ -8190,7 +8219,6 @@ async function respond$1(opts) {
     }
   try {
     return with_cookies(await render_response(__spreadProps(__spreadValues({}, opts), {
-      stuff,
       url: request.url,
       page_config,
       status,
@@ -8207,10 +8235,8 @@ async function respond$1(opts) {
   }
 }
 function get_page_config(leaf, options) {
-  if ("ssr" in leaf) {
-    throw new Error("`export const ssr` has been removed \u2014 use the handle hook instead: https://kit.svelte.dev/docs#hooks-handle");
-  }
   return {
+    ssr: "ssr" in leaf ? !!leaf.ssr : options.ssr,
     router: "router" in leaf ? !!leaf.router : options.router,
     hydrate: "hydrate" in leaf ? !!leaf.hydrate : options.hydrate
   };
@@ -8221,7 +8247,7 @@ function with_cookies(response, set_cookie_headers) {
   }
   return response;
 }
-async function render_page(request, route, match, options, state, ssr) {
+async function render_page(request, route, match, options, state) {
   if (state.initiator === route) {
     return {
       status: 404,
@@ -8237,8 +8263,7 @@ async function render_page(request, route, match, options, state, ssr) {
     state,
     $session,
     route,
-    params,
-    ssr
+    params
   });
   if (response) {
     return response;
@@ -8380,7 +8405,6 @@ function get_multipart(text, boundary) {
   return data;
 }
 async function respond(incoming, options, state = {}) {
-  var _a4;
   if (incoming.url.pathname !== "/" && options.trailing_slash !== "ignore") {
     const has_trailing_slash = incoming.url.pathname.endsWith("/");
     if (has_trailing_slash && options.trailing_slash === "never" || !has_trailing_slash && options.trailing_slash === "always" && !(incoming.url.pathname.split("/").pop() || "").includes(".")) {
@@ -8402,25 +8426,6 @@ async function respond(incoming, options, state = {}) {
     params: {},
     locals: {}
   });
-  const { parameter, allowed } = options.method_override;
-  const method_override = (_a4 = incoming.url.searchParams.get(parameter)) == null ? void 0 : _a4.toUpperCase();
-  if (method_override) {
-    if (request.method.toUpperCase() === "POST") {
-      if (allowed.includes(method_override)) {
-        request.method = method_override;
-      } else {
-        const verb = allowed.length === 0 ? "enabled" : "allowed";
-        const body = `${parameter}=${method_override} is not ${verb}. See https://kit.svelte.dev/docs#configuration-methodoverride`;
-        return {
-          status: 400,
-          headers: {},
-          body
-        };
-      }
-    } else {
-      throw new Error(`${parameter}=${method_override} is only allowed with POST requests`);
-    }
-  }
   const print_error = (property, replacement) => {
     Object.defineProperty(request, property, {
       get: () => {
@@ -8431,24 +8436,19 @@ async function respond(incoming, options, state = {}) {
   print_error("origin", "origin");
   print_error("path", "pathname");
   print_error("query", "searchParams");
-  let ssr = true;
   try {
     return await options.hooks.handle({
       request,
-      resolve: async (request2, opts) => {
-        if (opts && "ssr" in opts)
-          ssr = opts.ssr;
+      resolve: async (request2) => {
         if (state.prerender && state.prerender.fallback) {
           return await render_response({
             url: request2.url,
             params: request2.params,
             options,
             $session: await options.hooks.getSession(request2),
-            page_config: { router: true, hydrate: true },
-            stuff: {},
+            page_config: { ssr: false, router: true, hydrate: true },
             status: 200,
-            branch: [],
-            ssr: false
+            branch: []
           });
         }
         const decoded = decodeURI(request2.url.pathname).replace(options.paths.base, "");
@@ -8456,7 +8456,7 @@ async function respond(incoming, options, state = {}) {
           const match = route.pattern.exec(decoded);
           if (!match)
             continue;
-          const response = route.type === "endpoint" ? await render_endpoint(request2, route, match) : await render_page(request2, route, match, options, state, ssr);
+          const response = route.type === "endpoint" ? await render_endpoint(request2, route, match) : await render_page(request2, route, match, options, state);
           if (response) {
             if (response.status === 200) {
               const cache_control = get_single_valued_header(response.headers, "cache-control");
@@ -8486,34 +8486,19 @@ async function respond(incoming, options, state = {}) {
             state,
             $session,
             status: 404,
-            error: new Error(`Not found: ${request2.url.pathname}`),
-            ssr
+            error: new Error(`Not found: ${request2.url.pathname}`)
           });
         }
       }
     });
-  } catch (e2) {
-    const error2 = coalesce_to_error(e2);
-    options.handle_error(error2, request);
-    try {
-      const $session = await options.hooks.getSession(request);
-      return await respond_with_error({
-        request,
-        options,
-        state,
-        $session,
-        status: 500,
-        error: error2,
-        ssr
-      });
-    } catch (e22) {
-      const error3 = coalesce_to_error(e22);
-      return {
-        status: 500,
-        headers: {},
-        body: options.dev ? error3.stack : error3.message
-      };
-    }
+  } catch (err) {
+    const e2 = coalesce_to_error(err);
+    options.handle_error(e2, request);
+    return {
+      status: 500,
+      headers: {},
+      body: options.dev ? e2.stack : e2.message
+    };
   }
 }
 function afterUpdate() {
@@ -8593,7 +8578,6 @@ var App = class {
       hooks,
       hydrate: true,
       manifest: manifest2,
-      method_override: { "parameter": "_method", "allowed": [] },
       paths: { base, assets },
       prefix: assets + "/_app/",
       prerender: true,
@@ -8601,6 +8585,7 @@ var App = class {
       root: Root,
       service_worker: null,
       router: true,
+      ssr: true,
       target: "#svelte",
       template,
       trailing_slash: "never"
@@ -8624,7 +8609,7 @@ var manifest = {
   assets: new Set(["blob_01.svg", "blob_02.svg", "bottom-waves.svg", "feedback_app_profile.PNG", "MM/milanote.png", "MM/tech-stack.png", "MMBannerDesktop-01.png", "MMBannerDesktop.png", "MMBannerMobile.png", "MMLogo.png", "Model-Viewer/ModelViewerEcommerceProfile.png", "Model-Viewer/ModelViewerPrototype.png", "MotatGame/TreasureHunt.png", "MotatGame/TreasureMapClip.gif", "MotatGame/treasure_hunt_clip.gif", "portfolio_picture.png", "top-waves.svg"]),
   _: {
     mime: { ".svg": "image/svg+xml", ".PNG": "image/png", ".png": "image/png", ".gif": "image/gif" },
-    entry: { "file": "start-655a97f7.js", "js": ["start-655a97f7.js", "chunks/vendor-6b98a0cd.js"], "css": ["assets/start-464e9d0a.css"] },
+    entry: { "file": "start-e2eb2e23.js", "js": ["start-e2eb2e23.js", "chunks/vendor-9c584af2.js"], "css": ["assets/start-464e9d0a.css"] },
     nodes: [
       () => Promise.resolve().then(() => (init__(), __exports)),
       () => Promise.resolve().then(() => (init__2(), __exports2)),

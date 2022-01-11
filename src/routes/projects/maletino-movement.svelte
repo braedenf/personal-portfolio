@@ -12,7 +12,7 @@
 		Towards the end of 2021, I collaborated with fitness startup Maletino Movement to create a
 		personalised website and booking system.
 	</p>
-	<h2 class="text-primary font-bold text-2xl lg:text-3xl pb-4">The Website</h2>
+	<h2 class="text-primary font-bold text-2xl lg:text-3xl py-4 sm:py-8">The Website</h2>
 	<p class="leading-relaxed text-lg mb-4 lg:mb-8">
 		I designed the website in collaboration with the company founder Yolanda Maletino. We went
 		through the process of creating the brand and vision for the company, then I brought the ideas
@@ -32,7 +32,7 @@
 			</p>
 		</div>
 	</div>
-	<h2 class="text-primary font-bold text-2xl lg:text-3xl py-8">The Tech Stack</h2>
+	<h2 class="text-primary font-bold text-2xl lg:text-3xl py-4 sm:py-8 mt-6">The Tech Stack</h2>
 
 	<p class="leading-relaxed text-lg mb-4 lg:mb-8">
 		With the front-end web framework Sveltekit I developed each feature on the website iteratively

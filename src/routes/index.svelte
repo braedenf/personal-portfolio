@@ -22,7 +22,7 @@
 		id="hero"
 	>
 		<svg
-			class="opacity-20 blob-motion -z-30 w-[40%] sm:w-[50%]"
+			class="opacity-20 blob-motion -z-30 w-[70%] sm:w-[50%]"
 			id="visual"
 			viewBox="0 0 900 900"
 			width="900"
@@ -54,7 +54,10 @@
 				<h2
 					class="font-display text-white font-bold text-4xl sm:text-5xl lg:text-6xl xl:text-8xl mb-8"
 				>
-					Welcome to my <span class="text-secondary">portfolio</span>
+					Welcome to my <span
+						class="text-transparent bg-clip-text bg-gradient-to-br from-secondary-darker to-secondary"
+						>portfolio</span
+					>
 				</h2>
 				<p
 					class="font-body text-white text-lg border-t-2 pt-2 border-l-0 border-r-0 border-b-0 border-primary border-2"
@@ -66,7 +69,7 @@
 			</div>
 
 			<img
-				class="object-left rounded-full shadow-lg h-52 sm:h-56 lg:h-64 xl:h-72⌈"
+				class="object-left rounded-full shadow-lg aspect-auto w-[60%] sm:w-full"
 				src="portfolio_picture.png"
 				alt="profile of me"
 			/>

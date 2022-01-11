@@ -19,7 +19,7 @@
 		> - A furniture and lighting company. I worked with Resident to improve the way customers can interact
 		with their products online, using a 3D and AR viewer for products featured online.
 	</p>
-	<h2 class="text-primary font-bold text-2xl lg:text-3xl pb-4">Building the Prototype</h2>
+	<h2 class="text-primary font-bold text-2xl lg:text-3xl py-6">Building the Prototype</h2>
 
 	<p class="leading-relaxed text-lg mb-4 lg:mb-8">
 		To create the 3D Viewer for the prototype I explored many options, such as <a
@@ -43,7 +43,7 @@
 		> library, as it is open source and free to use. Additionally, the library includes features such
 		as a Web viewer, AR Viewer, Custom Camera settings, light environment settings and so on.
 	</p>
-	<h2 class="text-primary font-bold text-2xl lg:text-3xl pb-4">Hosting the 3D Files</h2>
+	<h2 class="text-primary font-bold text-2xl lg:text-3xl py-6">Hosting the 3D Files</h2>
 	<p class="leading-relaxed text-lg mb-4 lg:mb-8">
 		To host the many 3D model variants for the furniture and lighting products, I used a cloud
 		hosting software called <a
