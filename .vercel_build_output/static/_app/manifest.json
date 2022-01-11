@@ -1,0 +1,93 @@
+{
+  ".svelte-kit/build/runtime/internal/start.js": {
+    "file": "start-3a1f52ee.js",
+    "src": ".svelte-kit/build/runtime/internal/start.js",
+    "isEntry": true,
+    "imports": [
+      "_vendor-6b98a0cd.js"
+    ],
+    "dynamicImports": [
+      "src/routes/__layout.svelte",
+      ".svelte-kit/build/components/error.svelte",
+      "src/routes/index.svelte",
+      "src/routes/projects/ecommerce-model-viewer.svelte",
+      "src/routes/projects/maletino-movement.svelte",
+      "src/routes/projects/museum-web-game.svelte"
+    ],
+    "css": [
+      "assets/start-464e9d0a.css"
+    ]
+  },
+  "src/routes/__layout.svelte": {
+    "file": "pages/__layout.svelte-7f009885.js",
+    "src": "src/routes/__layout.svelte",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-6b98a0cd.js"
+    ],
+    "css": [
+      "assets/pages/__layout.svelte-7291ecd1.css"
+    ]
+  },
+  ".svelte-kit/build/components/error.svelte": {
+    "file": "error.svelte-1e5117c1.js",
+    "src": ".svelte-kit/build/components/error.svelte",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-6b98a0cd.js"
+    ]
+  },
+  "src/routes/index.svelte": {
+    "file": "pages/index.svelte-8d9b11a4.js",
+    "src": "src/routes/index.svelte",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-6b98a0cd.js"
+    ],
+    "css": [
+      "assets/pages/index.svelte-c581975f.css"
+    ]
+  },
+  "src/routes/projects/ecommerce-model-viewer.svelte": {
+    "file": "pages/projects/ecommerce-model-viewer.svelte-3a86af45.js",
+    "src": "src/routes/projects/ecommerce-model-viewer.svelte",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-6b98a0cd.js",
+      "_ProjectPage-7d60389c.js"
+    ]
+  },
+  "src/routes/projects/maletino-movement.svelte": {
+    "file": "pages/projects/maletino-movement.svelte-348467b2.js",
+    "src": "src/routes/projects/maletino-movement.svelte",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-6b98a0cd.js",
+      "_ProjectPage-7d60389c.js"
+    ]
+  },
+  "src/routes/projects/museum-web-game.svelte": {
+    "file": "pages/projects/museum-web-game.svelte-6d42c055.js",
+    "src": "src/routes/projects/museum-web-game.svelte",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-6b98a0cd.js",
+      "_ProjectPage-7d60389c.js"
+    ]
+  },
+  "_vendor-6b98a0cd.js": {
+    "file": "chunks/vendor-6b98a0cd.js"
+  },
+  "_ProjectPage-7d60389c.js": {
+    "file": "chunks/ProjectPage-7d60389c.js",
+    "imports": [
+      "_vendor-6b98a0cd.js"
+    ]
+  }
+}
