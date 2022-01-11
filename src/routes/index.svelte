@@ -100,7 +100,7 @@
 			>
 				<img
 					class="inline object-cover w-32 h-32 rounded-full"
-					src="ecommerce_profile.png"
+					src="/ecommerce_profile.png"
 					alt="ecommerce viewer website screenshot"
 				/>
 				<h4 class="font-bold text-center text-white bg-background-light px-3 rounded-full">
@@ -117,7 +117,7 @@
 			>
 				<img
 					class="inline object-cover w-32 h-32 rounded-full"
-					src="treasure_hunt_profile.png"
+					src="/treasure_hunt_profile.png"
 					alt="treasure hunt game screenshot"
 				/>
 				<h4 class="font-bold text-center text-white bg-background-light px-3 rounded-full">
