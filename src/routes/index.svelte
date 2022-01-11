@@ -2,6 +2,7 @@
 	import SectionLabel from '$lib/SectionLabel.svelte';
 	import KUTE from 'kute.js';
 	import { onMount } from 'svelte';
+	import { fly, fade } from 'svelte/transition';
 
 	onMount(() => {
 		const tween = KUTE.fromTo(
@@ -44,7 +45,11 @@
 				/></g
 			>
 		</svg>
-		<div class="grid grid-cols-1 gap-8 lg:gap-3 sm:grid-cols-3 justify-items-center">
+		<div
+			in:fly={{ y: 100, duration: 1500 }}
+			out:fade
+			class="grid grid-cols-1 gap-8 lg:gap-3 sm:grid-cols-3 justify-items-center"
+		>
 			<div class="col-span-2">
 				<h2
 					class="font-display text-white font-bold text-4xl sm:text-5xl lg:text-6xl xl:text-8xl mb-8"
