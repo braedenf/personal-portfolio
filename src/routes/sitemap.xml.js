@@ -32,6 +32,11 @@ export async function get() {
             <changefreq>daily</changefreq>
             <priority>0.7</priority>
         </url>
+        <url>
+            <loc>${routes[3]}</loc>
+            <changefreq>daily</changefreq>
+            <priority>0.7</priority>
+        </url>
       </urlset>`
 	};
 }
