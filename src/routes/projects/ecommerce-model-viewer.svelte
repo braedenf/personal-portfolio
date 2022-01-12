@@ -2,6 +2,10 @@
 	import ProjectPage from '$lib/ProjectPage.svelte';
 </script>
 
+<svelte:head>
+	<title>Braeden Developer Portfolio - Ecommerce Model Viewer</title>
+</svelte:head>
+
 <ProjectPage
 	headerImageUrl="/Model-Viewer/ModelViewerPrototype.png"
 	projectLink="https://determined-mirzakhani-828e94.netlify.app/"

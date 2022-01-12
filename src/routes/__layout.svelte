@@ -10,7 +10,6 @@
 		content="I am a creative technologist that specialises in web technologies. I love to tinker and experiment with creating engaging iteractive experiences."
 	/>
 	<meta property="og:image" content="portfolio_picture.jpg" />
-	<title>Braeden Developer Portfolio</title>
 </svelte:head>
 
 <header id="home">

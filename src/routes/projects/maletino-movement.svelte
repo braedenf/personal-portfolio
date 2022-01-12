@@ -2,6 +2,10 @@
 	import ProjectPage from '$lib/ProjectPage.svelte';
 </script>
 
+<svelte:head>
+	<title>Braeden Developer Portfolio - Maletino Movement</title>
+</svelte:head>
+
 <ProjectPage headerImageUrl="/MMBannerDesktop-01.png" projectLink="https://www.maletinomovement.nz">
 	<h1
 		class="text-3xl sm:text-4xl lg:text-5xl xl:text-7xl lg:mt-8 font-bold text-background-secondary mb-6 lg:mb-12"

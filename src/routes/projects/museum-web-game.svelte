@@ -2,6 +2,10 @@
 	import ProjectPage from '$lib/ProjectPage.svelte';
 </script>
 
+<svelte:head>
+	<title>Braeden Developer Portfolio - Museum Web Game</title>
+</svelte:head>
+
 <ProjectPage
 	headerImageUrl="/MotatGame/TreasureMapClip.gif"
 	projectLink="https://motatnz.itch.io/motat-treasure-hunt"
